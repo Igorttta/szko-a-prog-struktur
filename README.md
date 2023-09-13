@@ -1,0 +1,1 @@
+# szko-a-prog-struktur
