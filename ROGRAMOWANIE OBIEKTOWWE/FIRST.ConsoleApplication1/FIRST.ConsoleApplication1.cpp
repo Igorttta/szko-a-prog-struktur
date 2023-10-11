@@ -8,7 +8,7 @@ int main()
 	std::cout << "Hello World!\n";
 	std::cout << "Hello World!\n";
 	std::cout << "MAM na Imide igor\n";
-	std::cout << "MAM na Imide igor\n";
+	std::cout << "MAM na Imide igora\n";
 	std::cout << "\n";
 	std::cout << 243 << "\n";
 	std::cout << 121.4 << "\n";
