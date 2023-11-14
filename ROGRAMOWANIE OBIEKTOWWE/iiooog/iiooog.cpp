@@ -1,97 +1,191 @@
-// iiooog.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
+﻿﻿#include <iostream>
 
-#include <iostream>
+/*
+* Napisz program, który poprosi użytkownika o podanie długości boku a i b prostokąta, a następnie obliczy i wyświetli pole prostokąta.
 
-//NApisz program, kt�ry wczyta  urytkownika jego wiek a nast�pnie wy�wietli go na konsoli.
-void task1()
+* Napisz program, który poprosi użytkownika o podanie długości podstawy i wysokości trójkąta, a następnie obliczy pole tego trójkąta, wyświetlając wynik.
 
-{
-	short ageFromUser;
-	std::cout << "podaj swoj wiek.\n";
-	std::cin >> ageFromUser;
+* Napisz program, który poprosi użytkownika o podanie promienia koła i obliczy pole tego koła, wyświetlając wynik.
 
-	std::cout << "Masz" << ageFromUser << "lat.\n";
-}
+* Napisz program, który poprosi użytkownika o podanie długości podstawy a, podstawy b i wysokości h trapezu, a następnie obliczy pole tego trapezu, wyświetlając wynik.
 
-//Stw�rz program kt�ry pobiera od urzytkownika 
-//d�ugos� w metrach i przelicza j� na centymetry,
-//milimetry i kilometry.Wy�wietl wynik
-task2()
+* Napisz program, który poprosi użytkownika o podanie długości krawędzi sześcianu i obliczy jego objętość, wyświetlając wynik.
+
+* Napisz program, który poprosi użytkownika o podanie temperatury w stopniach Celsiusza, a następnie przeliczy ją na stopnie Fahrenheita i wyświetli wynik.
+
+* Napisz program, który konwertuje wprowadzoną kwotę w jednej walucie na inną, korzystając z określonego kursu wymiany.
+
+* Napisz program, który poprosi użytkownika o podanie dwóch liczb (a, b) i obliczy średnią arytmetyczną tych liczb. Następnie wyświetli wynik.
+
+* Napisz program, który poprosi użytkownika o podanie trzech liczb (a, b, c) i obliczy średnią arytmetyczną tych liczb. Następnie wyświetli wynik.
+
+* Program obliczający średnią ważoną trzech liczb z podanymi odpowiednimi wagami w1, w2 i w3.
+
+* Napisz program, który poprosi użytkownika o podanie dwóch liczb całkowitych. Następnie wykona operacje (+, -, *, /) i wyświetli wyniki.
+
+* Napisz program, który poprosi użytkownika o podanie liczby sekund i przeliczy je na godziny i minuty, wyświetlając wynik.
+
+* Napisz program, który poprosi użytkownika o podanie współrzędnych (x1, y1) i (x2, y2) dwóch punktów w układzie kartezjańskim, a następnie obliczy odległość między nimi, wyświetlając wynik.
+
+
+*/
+
+
+//Stwórz program, który pobiera od użytkownika 
+//długość w metrach i przelicza ją na centymetry, 
+//milimetry i  kilometry. Wyświetl wynik.
+void task2()
 {
 	float lengthInMeterFromUser;
-	std::cout << "POdaj D�ugo�� w metrach\n ";
+	std::cout << "Podaj długość w metrach\n";
 	std::cin >> lengthInMeterFromUser;
 
-	float  LenghtInCentimeter;
-	LenghtInCentimeter = lengthInMeterFromUser * 100;
+	float lengthInCentimeter;
 
-	float lenghtInMilimeter = LenghtInCentimeter * 10;
+	lengthInCentimeter = lengthInMeterFromUser * 100;
 
-	float lenghtInKilometer = lengthInMeterFromUser / 1000;
+	float lengthInMilimeter = lengthInCentimeter * 10;
 
-	std::cout << "Metry:" << lengthInMeterFromUser << "\n";
-	std::cout << "Centymetry:" << LenghtInCentimeter << "\n";
-	std::cout << "Kilometry:" << lenghtInKilometer << "\n";
-	std::cout << "Milimetry:" << lenghtInMilimeter << "\n";
+	float LengthInKilometer = lengthInMeterFromUser / 1000;
+
+	std::cout << "Metry: " << lengthInMeterFromUser << "\n";
+	std::cout << "Centymetry: " << lengthInCentimeter << "\n";
+	std::cout << "Milimetry: " << lengthInMilimeter << "\n";
+	std::cout << "Kilometry: " << LengthInKilometer << "\n";
+}
+
+/* Napisz program, który poprosi użytkownika o podanie długości boku a i b prostokąta, a następnie obliczy i wyświetli pole prostokąta.*/
+void task3()
+{
+	float lenghtSideA , lenghtSideB;
+
+	std::cout <<" Podaj długość boku A";
+	std::cin >> lenghtSideA;
+
+
+		std::cout <<" Podaj długość boku B";
+		std::cin >> lenghtSideB;
+
+		float   areaOfRectangle= lenghtSideA + lenghtSideA;
+		
+			std::cout <<"Pole Prostokąta " << areaOfRectangle"\n";
+}
+void task4()
+/*  Napisz program, który poprosi użytkownika o podanie długości podstawy i wysokości trójkąta, a następnie oblic
+zy pole tego trójkąta, wyświetlając wynik. */ 
+{
+	float lengthSideBaseOfTriangle
+		std::cout << Podaj długość podstawy Trójkąta;
+
+	float lengtHeightOfTriangle
+		std::cout << Podaj długość wysokość Trójkąta;
+	float areaOfTriangle = lengtHeightOfTriangle * lengthSideBaseOfTriangle / 2
+		std::cout << "pole trójkąta " << areaOfTriangle
+
+
 
 
 }
+	
+	
+	
+	}
+}
+*Napisz program, który poprosi użytkownika o podanie promienia koła i obliczy pole tego koła, wyświetlając wynik.
+void task5()
+* Napisz program, który poprosi użytkownika o podanie długości podstawy a, podstawy b i wysokości h trapezu, a następnie obliczy pole tego trapezu, wyświetlając wynik.
+void task6()
+{
+	float side A;
+	std::cout << "Podaj długość podstawy A \n";
+	std::cin >> sideA;
+
+
+
+
+
+}
+* Napisz program, który poprosi użytkownika o podanie długości krawędzi sześcianu i obliczy jego objętość, wyświetlając wynik.
+void task7()
+void task8()
+void task9()
+void task10()
+void task11()
+void task12()
+void task13()
+void task14()
 
 int main()
 {
-	//task1();
-	task1();
-	task2();
+	setlocale(LC_CTYPE, "polish");
+
+	//task2();
+	task3();
+	task4();
+	task5();
+	task6();
+	task7();
+	task8();
+	task9(); 
+	task10();
+	task11();
+	task12();
+	task13();
+	
+
+
+
+
 }
 
 /*
-Algortym- Sko�czony zbi�r instrukcji realizuj�cych postawione przed nim zadanie.
-Kolejno�� instrukcji w zbiorze jest okre�lona
+
+Algorytm - skończony zbiór instrukcji realizujący postawione przed nim zadanie.
+Kolejność instrukcji w zbiorze jest określona.
 Sposoby zapisu:
-w punktach
-opis s�owny
-j�zyk programowania lub pseudokod
-zbi�r rysunk�w
-schemat blokowy
+* w punktach
+* opis słowny
+* język programowania lub pseudokod
+* zbiór rysunków
+* schemat blokowy
 
-zmienna-jest to pewien obszar pamieci, s��cy do przechowywania danych. Te dane mazna modyfikowa�
-zmienna pozwala przechowa� tylko jedn� wartos� w danym momencie czasu.
+Zmienna - jest to pewien obszar w pamięci, słóżący do przechowywania danych. Te dane można modyfikować.
+Zmienna pozwala przechować tylko jedną wartość w danym momencie czasu.
 
-deklaracaja zmiennej - moment jej utworzenia
+Deklaracja zmiennej - moment jej utworzenia.
 
 typ_zmiennej nazwa_zmiennej;
-typ zmiennej m�wi o wielko��i obszaru pami�ci i o rodzaju przechowywania danych
 
-short		liczby ca�kowite ze znakiem 2 bajty	<-32 768; 32 767>
-int/long	liczby ca�kowite ze znakiem 4 bajt  <-2 147 483 648 ; 2 147 483 647>
-long long	liczby ca�kowite ze znakiem 8 bajt	<- 9 223 372 036 854 775 888 ; 9 223 372 036 854 775 887
+Typ zmiennej - mówi o wielkości obszaru w pamięci i o rodzaju przechowywanych danych.
 
+short           liczby całkowite ze znakiem     2 bajty     <-32 768; 32 767>
+int/long        liczby całkowite ze znakiem     4 bajty     <-2 147 483 648; 2 147 483 647>
+long long       liczby całkowite ze znakiem     8 bajtów    <-9 223 372 036 854 775 808, 9 223 372 036 854 775 807>
 
- Je�eli przed powyrzyszymi tpyami dodamy s�owo "unsigned" to zakres jest od zera do podwojonego zakresu g�nego
- plus 1.
+Jeżeli przed powyższymi typami dodamy słowo "unsigned" to zakres
+jest od zera do podwojonego zakresu górnego plus 1.
 
- float liczby rzeczywiste ze znakiem 4 bajty
- double liczby rzeczywiste ze znakiem 8 bajty
-long double liczby rzeczywiste ze znakiem 12 bajty
+float           liczby rzeczywiste ze znakiem   4 bajty
+double          liczby rzeczywiste ze znakiem   8 bajtów
+long double     liczby rzeczywiste ze znakiem   12 bajtów
 
-Nazwa zmiennej -nazwa obszaru w pami�ci. Poprzez ta nazw� odwo�ujemy si� do obszaru.
+Nazwa zmiennej - nazwa obszaru w pamięci. Poprzez ta nazwę odwołujemy się do tego obszaru.
 
-Wymagania kompilatora wzgledem nazwy
--u�ycie tylko dozwolonych znak�w
--alfabet angielski a-z oraz A-Z
--yry arbaskie 0-9
--podkre�lenie (pod�oga)
-* pierwszym znakiem nie mo�e by� cyfra
-* nie mo�e to by� s�owo kluczowe danego j�zyka programowania
-* musi by� unikalna w danej widoczno�ci
+Wymagania kompilatora względem nazwy:
+* uzycie tylko dozwolonych znaków
+	- alfabet angielski a-z oraz A-Z
+	- cyfry arabskie 0-9
+	- podkreślenie (podłoga) _
+* pierwszym znakiem nie może być cyfra
+* nie może to być słowo kluczowe danego języka programowania
+* musi być unikalna w danej widoczności
 
-Wymagania programist�w:
-* je�li nazwa sk��da si� z wielu wyraz�w to zamiast spacji:
-	- u�ywamy znaku podkre�lenia np. first_number_from_user
-	- stosujemy camel case, czyli piszemy wszystko razem a s�owa (zaczynamy od drugiego)
-	  zaczynamy z du�ej litery np. firstNumberFromUser
-* nazwa zmiennej musi oddawa� charakter przechowywanych danych, czyli mie� znaczenie
+Wymagania programistów:
+* jeśli nazwa skłąda się z wielu wyrazów to zamiast spacji:
+	- używamy znaku podkreślenia np. first_number_from_user
+	- stosujemy camel case, czyli piszemy wszystko razem a słowa (zaczynamy od drugiego)
+	  zaczynamy z dużej litery np. firstNumberFromUser
+* nazwa zmiennej musi oddawać charakter przechowywanych danych, czyli mieć znaczenie
 * nazwy po angielsku !!!!
 
 */
