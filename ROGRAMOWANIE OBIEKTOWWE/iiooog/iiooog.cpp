@@ -76,7 +76,7 @@ zy pole tego trójkąta, wyświetlając wynik. */
 {
 	float lengthSideBaseOfTriangle
 		std::cout << Podaj długość podstawy Trójkąta;
-
+	,l
 	float lengtHeightOfTriangle
 		std::cout << Podaj długość wysokość Trójkąta;
 	float areaOfTriangle = lengtHeightOfTriangle * lengthSideBaseOfTriangle / 2
