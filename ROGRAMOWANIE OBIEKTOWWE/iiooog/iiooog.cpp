@@ -1,4 +1,4 @@
-﻿﻿#include <iostream>
+﻿#include <iostream>
 
 /*
 * Napisz program, który poprosi użytkownika o podanie długości boku a i b prostokąta, a następnie obliczy i wyświetli pole prostokąta.
@@ -57,81 +57,78 @@ void task2()
 /* Napisz program, który poprosi użytkownika o podanie długości boku a i b prostokąta, a następnie obliczy i wyświetli pole prostokąta.*/
 void task3()
 {
-	float lenghtSideA , lenghtSideB;
+	float lenghtSideA, lenghtSideB;
 
-	std::cout <<" Podaj długość boku A";
+	std::cout << " Podaj długość boku A";
 	std::cin >> lenghtSideA;
 
 
-		std::cout <<" Podaj długość boku B";
-		std::cin >> lenghtSideB;
+	std::cout << " Podaj długość boku B";
+	std::cin >> lenghtSideB;
 
-		float   areaOfRectangle= lenghtSideA + lenghtSideA;
-		
-			std::cout <<"Pole Prostokąta " << areaOfRectangle"\n";
+	float   areaOfRectangle = lenghtSideA + lenghtSideA;
+
+	std::cout << "Pole Prostokąta " << areaOfRectangle;
 }
 void task4()
 /*  Napisz program, który poprosi użytkownika o podanie długości podstawy i wysokości trójkąta, a następnie oblic
-zy pole tego trójkąta, wyświetlając wynik. */ 
+zy pole tego trójkąta, wyświetlając wynik. */
 {
-	float lengthSideBaseOfTriangle
-		std::cout << Podaj długość podstawy Trójkąta;
-	,l
-	float lengtHeightOfTriangle
-		std::cout << Podaj długość wysokość Trójkąta;
-	float areaOfTriangle = lengtHeightOfTriangle * lengthSideBaseOfTriangle / 2
-		std::cout << "pole trójkąta " << areaOfTriangle
+	float lengthSideBaseOfTriangle;
+	std::cout << "Podaj długość podstawy Trójkąta";
+	std::cin >> lengthSideBaseOfTriangle;
 
+	float lengtHeightOfTriangle;
+	std::cout << "Podaj długość wysokość Trójkąta";
+	std::cin >> lengtHeightOfTriangle;
 
-
-
+	float areaOfTriangle = lengtHeightOfTriangle * lengthSideBaseOfTriangle / 2;
+	std::cout << "pole trójkąta " << areaOfTriangle;
 }
-	
-	
-	
-	}
-}
-*Napisz program, który poprosi użytkownika o podanie promienia koła i obliczy pole tego koła, wyświetlając wynik.
+/*Napisz program  który poprosi użytkownika o podanie promienia koła i obliczy pole tego koła, wyświetlając wynik.*/
 void task5()
-* Napisz program, który poprosi użytkownika o podanie długości podstawy a, podstawy b i wysokości h trapezu, a następnie obliczy pole tego trapezu, wyświetlając wynik.
+{
+	float CircleRadius;
+	std::cout << "Podaj promień koła ";
+	std::cin >> CircleRadius;
+	float areaOfCircle = 3, 14 * CircleRadius * CircleRadius;
+	std::cout<< "pole koła " << areaOfCircle
+}
+/*Napisz program, który poprosi użytkownika o podanie długości podstawy a, podstawy b i wysokości h trapezu, a następnie obliczy pole tego trapezu, 
+\wyświetlając wynik.*/
 void task6()
 {
-	float side A;
+	float sideA;
 	std::cout << "Podaj długość podstawy A \n";
 	std::cin >> sideA;
+	float sideB;
+	std::cout << "Podaj długość podstawy B \n";
+	std::cin >> sideB;
+	float heightH;
+	std::cout << "Podaj długość Wysokość H \n";
+	std::cin >> heightH;
+	float areaOfTrapeze = (sideA + sideB) * heightH / 2;
+	std::cout << "pole trapezu " << areaOfTrapeze;
+}
 
-
-
-
+/*Napisz program, który poprosi użytkownika o podanie długości krawędzi sześcianu i obliczy jego objętość, wyświetlając wynik.*/
+void task7()
+{
 
 }
-* Napisz program, który poprosi użytkownika o podanie długości krawędzi sześcianu i obliczy jego objętość, wyświetlając wynik.
-void task7()
-void task8()
-void task9()
-void task10()
-void task11()
-void task12()
-void task13()
-void task14()
 
 int main()
 {
 	setlocale(LC_CTYPE, "polish");
 
 	//task2();
-	task3();
-	task4();
+	//task3();
+	//task4();
 	task5();
-	task6();
-	task7();
-	task8();
-	task9(); 
-	task10();
-	task11();
-	task12();
-	task13();
+	//task6();
+	//task7();
 	
+
 
 
 
