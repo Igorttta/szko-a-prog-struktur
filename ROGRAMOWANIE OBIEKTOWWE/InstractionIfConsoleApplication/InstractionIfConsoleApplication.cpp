@@ -2,21 +2,6 @@
 
 /*
 
-* Napisz program, który poprosi użytkownika o podanie masy ciała (w kilogramach) i wzrostu (w metrach).
-Na podstawie tych danych oblicz wskaźnik BMI (Body Mass Index) i wyświetl odpowiedni komunikat informujący o stanie zdrowia.
-BMI = masa/wzrost^2
-poniżej 16 - wygłodzenie
-16 - 16.99 - wychudzenie
-17 - 18.49 - niedowagę
-18.5 - 24.99 - wagę prawidłową
-25.0 - 29.9 - nadwagę
-30.0 - 34.99 - I stopień otyłości
-35.0 - 39.99 - II stopień otyłości
-powyżej 40.0 - otyłość skrajną
-
-* Napisz program, który poprosi użytkownika o podanie liczby od 1 do 7 i wyświetli odpowiadający mu dzień tygodnia.
-* Napisz program, który wczyta numer miesiąca i wyświetli jego słowny odpowiednik.
-* Napisz program, który poprosi użytkownika o podanie roku i sprawdzi, czy jest to rok przestępny. Wyświetl odpowiedni komunikat.
 * Napisz program, który poprosi użytkownika o podanie liczby całkowitej i obliczy jej wartość bezwzględną. Wyświetl wynik.
 * Napisz program, który poprosi użytkownika o podanie wieku i sprawdzi, czy osoba jest pełnoletnia. Wyświetl odpowiedni komunikat.
 * Napisz program, który poprosi użytkownika o podanie długości trzech odcinków i sprawdzi, czy można zbudować z nich trójkąt. Wyświetl odpowiedni komunikat.
@@ -277,7 +262,7 @@ poniżej 16 - wygłodzenie
 35.0 - 39.99 - II stopień otyłości
 powyżej 40.0 - otyłość skrajną
 */
-void task9()
+ void task9()
 {
     float bodyWeight;
     std::cout << "Podaj wagę w kilogramach ";
@@ -311,14 +296,78 @@ void task9()
         std::cout << "masz 3 stopień otyłości ";
 
 }
-
+//Napisz program, który poprosi użytkownika o podanie liczby od 1 do 7 i wyświetli odpowiadający mu dzień tygodnia.
 void task10()
-{}
+{
+    int  daysOfTheWeek;
+    std::cout << "Napisz liczbę od 1 do 7";
+    std::cin >> daysOfTheWeek;
+    if (daysOfTheWeek == 1)
+        std::cout << "Jest POniedziałek";
+    else if (daysOfTheWeek == 2)
+        std::cout << "Jest  Wtorek ";
+    else if (daysOfTheWeek == 3)
+        std::cout << "Jest  Środa ";
+    else if (daysOfTheWeek == 4)
+        std::cout << "Jest  Czwartek ";
+    else if (daysOfTheWeek == 5)
+        std::cout << "Jest  Piątek ";
+    else if (daysOfTheWeek == 6)
+        std::cout << "Jest  Sobota ";
+    else if (daysOfTheWeek == 7)
+        std::cout << "Jest  NIedziela ";
+    }
+
+
+
+
+
+//Napisz program, który wczyta numer miesiąca i wyświetli jego słowny odpowiednik.
 
 void task11()
-{}
+{
+    int  Mounth;
+    std::cout << "Napisz liczbę od 1 do 12";
+    std::cin >> Mounth;
+    if( Mounth == 1 )
+        std::cout << "Jest Styczeń";
+    else if (Mounth == 2)
+        std::cout << "Jest  Luty ";
+    else if (Mounth == 3)
+        std::cout << "Jest  Marzec ";
+    else if (Mounth == 4)
+        std::cout << "Jest  Kwiecień ";
+    else if (Mounth == 5)
+        std::cout << "Jest  Maj ";
+    else if (Mounth == 6)
+        std::cout << "Jest  Czerwiec ";
+    else if (Mounth == 7)
+        std::cout << "Jest  Listopad ";
+    else if (Mounth == 8)
+        std::cout << "Jest  Sierpień ";
+    else if (Mounth == 9)
+        std::cout << "Jest  Wrzesień ";
+    else if (Mounth == 10)
+        std::cout << "Jest  Pażdziernik ";
+    else if (Mounth == 11)
+        std::cout << "Jest  Listopad ";
+    else if (Mounth == 12)
+        std::cout << "Jest  grudzien ";
+    
+
+}
+//Napisz program, który popro 
 void task12()
-{}
+{
+        int Year;
+        std::cout << "Napisz rok ";
+        std::cin >> Year;
+        if ((Year % 4 == 0 && Year % 100 != 0 ||  ( Year % 400  == 0))
+        std::cout << "Rok jest przestepny";
+        else
+            std::cout << "Rok nie jest przestepny";
+}
+//Napisz program, który poprosi użytkownika o podanie liczby całkowitej i obliczy jej wartość bezwzględną.Wyświetl wynik.
 
 int main()
 {   
@@ -330,11 +379,10 @@ int main()
    // task6();
     //task7();
     //task8();
-    task9();
-    task10();
-    task11();
+    //task9();
+    //task10();
+    //task11();
     task12();
-
 
 
 
