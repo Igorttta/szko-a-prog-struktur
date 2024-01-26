@@ -2,8 +2,6 @@
 
 /*
 
-* Napisz program, który poprosi użytkownika o podanie liczby całkowitej i obliczy jej wartość bezwzględną. Wyświetl wynik.
-* Napisz program, który poprosi użytkownika o podanie wieku i sprawdzi, czy osoba jest pełnoletnia. Wyświetl odpowiedni komunikat.
 * Napisz program, który poprosi użytkownika o podanie długości trzech odcinków i sprawdzi, czy można zbudować z nich trójkąt. Wyświetl odpowiedni komunikat.
 * Napisz program, który poprosi użytkownika o podanie oceny w skali 100-punktowej i przeliczy ją na ocenę procentową w przedziale od 0 do 100. Wyświetl wynik.
 * Program wyświetlający odpowiedni komunikat w zależności od podanej oceny (np. "bardzo dobry" dla oceny 5, "dobry" dla oceny 4 itd.)
@@ -359,29 +357,41 @@ void task11()
 //Napisz program, który popro 
 void task12()
 {
-        int Year;
-        std::cout << "Napisz rok ";
-        std::cin >> Year;
-        if ((Year % 4 == 0 && Year % 100 != 0 ||  ( Year % 400  == 0))
-        std::cout << "Rok jest przestepny";
-        else
-            std::cout << "Rok nie jest przestepny";
+       
 }
 //Napisz program, który poprosi użytkownika o podanie liczby całkowitej i obliczy jej wartość bezwzględną.Wyświetl wynik.
  
 void task13()
 {
         int number;
-        std::cout << "podaj liczbę całkowita";
+        std::cout << "podaj liczbę całkowita\n";
         std::cin >> number;
+        int numberOnMinus = number * -1;
 
         if (number < 0)
-            int numbeerOnMinus = number * -1;
+            std::cin >> numberOnMinus ;
 
-            if (number == 0)
-                std::cout << "LIczba 0 ";
-        if (number > 0)
+        else if (number == 0)
+            std::cout << "LIczba 0 ";
+        
+         else if (number > 0)
             std::cin >> number;
+        std::cout << "gg";
+
+}
+
+//Napisz program, który poprosi użytkownika o podanie wieku i sprawdzi, czy osoba jest pełnoletnia.Wyświetl odpowiedni komunikat.
+    void  task14()
+{
+        int age;
+        std::cout << "POdaj swój wiek ";
+        std::cin >> age;
+
+        if (age >= 18)
+            std::cout << "JEstes pełnoletni ";
+        else
+            std::cout << "NIe jstes połnoletni";
+
 
 }
 
@@ -402,8 +412,8 @@ int main()
     //task10();
     //task11();
     //task12();
+    //task13();
     task13();
-
 
 
 
