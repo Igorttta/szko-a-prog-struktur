@@ -2,7 +2,6 @@
 
 /*
 
-* Napisz program, który poprosi użytkownika o podanie długości trzech odcinków i sprawdzi, czy można zbudować z nich trójkąt. Wyświetl odpowiedni komunikat.
 * Napisz program, który poprosi użytkownika o podanie oceny w skali 100-punktowej i przeliczy ją na ocenę procentową w przedziale od 0 do 100. Wyświetl wynik.
 * Program wyświetlający odpowiedni komunikat w zależności od podanej oceny (np. "bardzo dobry" dla oceny 5, "dobry" dla oceny 4 itd.)
 * Napisz program, który na podstawie współczynników równania kwadratowego (a, b, c) sprawdzi, czy to równanie ma rozwiązania rzeczywiste, i jeśli tak, to je obliczy.
@@ -394,8 +393,36 @@ void task13()
 
 
 }
+    //Napisz program, który poprosi użytkownika o podanie długości trzech odcinków i sprawdzi, czy można zbudować z nich trójkąt.Wyświetl odpowiedni komunikat.
 
+    void task15()
+    {
+            int firstSideOfTheTriangle;
+            std::cout << "POdaj bok trójkąta";
+            std::cin >>  firstSideOfTheTriangle;
 
+            int secondSideOfTheTriangle;
+            std::cout << "POdaj bok trójkąta";
+            std::cin >> secondSideOfTheTriangle;
+
+            int thirdSideOfTheTriangle;
+            std::cout << "POdaj bok trójkąta";
+            std::cin >>  thirdSideOfTheTriangle;
+             
+            if (firstSideOfTheTriangle > secondSideOfTheTriangle && thirdSideOfTheTriangle)
+                std::cout << "możesz zrobic trójkąt";
+
+            if (secondSideOfTheTriangle > firstSideOfTheTriangle && thirdSideOfTheTriangle)
+                std::cout << " nie możesz zrobic trójkąt";
+            
+            if (thirdSideOfTheTriangle > secondSideOfTheTriangle && firstSideOfTheTriangle)
+
+            
+                std::cout << " nie możesz zrobic trójkąt";
+
+             
+
+   }
 
 
 int main()
@@ -413,9 +440,9 @@ int main()
     //task11();
     //task12();
     //task13();
-    task13();
-
-
+    //task13();
+    //task14();
+    task15();
 
 }
 
