@@ -368,6 +368,25 @@ void task12()
             std::cout << "Rok nie jest przestepny";
 }
 //Napisz program, który poprosi użytkownika o podanie liczby całkowitej i obliczy jej wartość bezwzględną.Wyświetl wynik.
+ 
+void task13()
+{
+        int number;
+        std::cout << "podaj liczbę całkowita";
+        std::cin >> number;
+
+        if (number < 0)
+            int numbeerOnMinus = number * -1;
+
+            if (number == 0)
+                std::cout << "LIczba 0 ";
+        if (number > 0)
+            std::cin >> number;
+
+}
+
+
+
 
 int main()
 {   
@@ -382,8 +401,8 @@ int main()
     //task9();
     //task10();
     //task11();
-    task12();
-
+    //task12();
+    task13();
 
 
 
