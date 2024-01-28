@@ -2,10 +2,6 @@
 
 /*
 
-* Napisz program, który poprosi użytkownika o podanie oceny w skali 100-punktowej i przeliczy ją na ocenę procentową w przedziale od 0 do 100. Wyświetl wynik.
-* Program wyświetlający odpowiedni komunikat w zależności od podanej oceny (np. "bardzo dobry" dla oceny 5, "dobry" dla oceny 4 itd.)
-* Napisz program, który na podstawie współczynników równania kwadratowego (a, b, c) sprawdzi, czy to równanie ma rozwiązania rzeczywiste, i jeśli tak, to je obliczy.
-* Program sprawdzający czy podana data jest poprawna (np. sprawdzając, czy dzień jest z zakresu od 1 do 31, miesiąc od 1 do 12 itd.)
 
 
 
@@ -76,6 +72,7 @@ void task1()
 
     //std::cout << "dfgsdf";
 }
+
 //Napisz program, który wczyta liczbę 
 //i sprawdzi czy jest ona z zakresu <1;10).
 void task2()
@@ -111,6 +108,8 @@ void task2()
         std::cout << "Liczba nie jest w zakresie\n";
     }
 }
+
+// Napisz program który poprosi urzytkownika o podanie 4 liczb i wybierze najwiékszá
 void task3()
 {
     int firstNumber , secondNumber , thirdNumber , fourthNumber ;
@@ -139,6 +138,8 @@ void task3()
            }
        }
 }
+
+//Napisz program który poprosi urzytkownia o podanie 2 liczb i wipisze je w kolejnosci rosnácej 
 void task4()
 {
     int Firstnumber;
@@ -159,6 +160,8 @@ void task4()
     }
 
 }
+
+//Napisz program który poprosi urzytkownia o podanie 3 liczb i wipisze je w kolejnosci rosnácej 
 void task5()
 {
     int firstNumber;
@@ -202,8 +205,8 @@ void task5()
         }
     }
 }
-//Napisz program, który poprosi użytkownika o podanie dwóch liczb całkowitych i sprawdzi, czy są one równe.Wyświetl odpowiedni komunikat.
 
+//Napisz program, który poprosi użytkownika o podanie dwóch liczb całkowitych i sprawdzi, czy są one równe.Wyświetl odpowiedni komunikat.
 void task6()
 {
     int firstNumber;
@@ -268,7 +271,7 @@ powyżej 40.0 - otyłość skrajną
     std::cout << "Podaj wzrost w centymetrach ";
     std::cin >> bodyHeight;
 
-    float BMI = bodyWeight / bodyHeight * 2;
+  BMI = bodyWeight / (bodyHeight * bodyHeight );
     if (BMI < 16)
         std::cout << "jestes wygłodzony";
     else if (BMI >= 16 && BMI <= 16.99)
@@ -365,18 +368,15 @@ void task13()
         int number;
         std::cout << "podaj liczbę całkowita\n";
         std::cin >> number;
-        int numberOnMinus = number * -1;
 
-        if (number < 0)
-            std::cin >> numberOnMinus ;
+        int wartosc_bezwzgledna;
 
-        else if (number == 0)
-            std::cout << "LIczba 0 ";
-        
-         else if (number > 0)
-            std::cin >> number;
-        std::cout << "gg";
-
+        if (number  < 0) {
+            wartosc_bezwzgledna = -number;
+        }
+        else {
+            wartosc_bezwzgledna = number;
+        }
 }
 
 //Napisz program, który poprosi użytkownika o podanie wieku i sprawdzi, czy osoba jest pełnoletnia.Wyświetl odpowiedni komunikat.
@@ -423,8 +423,69 @@ void task13()
              
 
    }
+    //Napisz program, który poprosi użytkownika o podanie oceny w skali 100 - punktowej i przeliczy ją na ocenę procentową w przedziale od 0 do 100. Wyświetl wynik.
+
+    void task16()
+
+    {
+        int percentage;
+        
+        std::cout << "Podaj procent od 0 do 100";
+        std::cin >> percentage;
+
+        if (percentage >= 0  && percentage =< 33 )
+            std::cout << " jest to 1"
+        else if (percentage > 33 && percentage =<44  )
+            std::cout << "jest to 2"
+        else if (percentage > 44 && percentage = < 70)
+            std::cout << "jest to 3"
+        else if (percentage > 70 && percentage = <85 )
+            std::cout << "jest to 4"
+        else if (percentage > 85 && percentage = < 99)
+            std::cout << "jest to 5"
+        else if (percentage == 100)
+            std::cout << "jest to 6"
+    }
 
 
+
+    }
+    //Pogram wyświetlający odpowiedni komunikat w zależności od podanej oceny(np. "bardzo dobry" dla oceny 5, "dobry" dla oceny 4 itd.)
+
+    void task17()
+    {
+        int oceny;
+        std::cout << "Podaj ocene";
+            std::cin >> oceny;
+
+            if (oceny ==6)
+                std::cout << "celujácy"
+                else if (oceny == 5)
+                    std::cout << "bardzo dobry"
+                    else if (oceny == 4)
+                        std::cout << "dobry"
+                        else if (oceny == 3)
+                            std::cout << "dostateczny"
+                            else if (oceny == 2)
+                                std::cout << "dopuszczajácy "
+                                else if (oceny == 1)
+                                    std::cout << "niedostateczny"
+    }
+    //Napisz program, który na podstawie współczynników równania kwadratowego(a, b, c) sprawdzi, czy to równanie ma rozwiązania rzeczywiste, i jeśli tak, to je obliczy.
+
+    void task18()
+    {
+
+
+
+    }
+    //Program sprawdzający czy podana data jest poprawna(np.sprawdzając, czy dzień jest z zakresu od 1 do 31, miesiąc od 1 do 12 itd.)
+    void task19()
+    {
+
+
+
+    }
 int main()
 {   
     //task1();
@@ -442,7 +503,11 @@ int main()
     //task13();
     //task13();
     //task14();
-    task15();
+    //task15();
+    //task16();
+    task17();
+    //task18();
+    //task19();
 
 }
 

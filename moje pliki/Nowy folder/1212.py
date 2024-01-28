@@ -66,10 +66,21 @@
 # """
 # print(longText)
 
-text1 = "lubie placki z miodem"
-text2 = f"bardzo {text1}"
-print(text2)
 
+# text1 = "lubie placki z miodem"
+# text2 = f"bardzo {text1}"
+# print(text2)
 
 # W komentowanie kilku linijek tekstu pomocny będzie skrut (control + / )
 #  Operator modulo to inaczej % polega na zwracaniu reszty z dwóch liczb np 9 / 2 = 4.5 Modulo to 5
+
+
+
+
+
+
+
+
+
+
+
