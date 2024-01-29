@@ -423,8 +423,8 @@ void task13()
              
 
    }
-    //Napisz program, który poprosi użytkownika o podanie oceny w skali 100 - punktowej i przeliczy ją na ocenę procentową w przedziale od 0 do 100. Wyświetl wynik.
 
+    //Napisz program, który poprosi użytkownika o podanie oceny w skali 100 - punktowej i przeliczy ją na ocenę procentową w przedziale od 0 do 100. Wyświetl wynik.
     void task16()
 
     {
@@ -476,16 +476,23 @@ void task13()
     void task18()
     {
 
-
+vbdbd
 
     }
     //Program sprawdzający czy podana data jest poprawna(np.sprawdzając, czy dzień jest z zakresu od 1 do 31, miesiąc od 1 do 12 itd.)
     void task19()
     {
+        int mounth, day, year;
+            std::cout << "POdaj dzień";
+            std::cin >> day;
+            std::cout << "POdaj miesiąc";
+            std::cin >> mounth;
+            std::cout << "POdaj rok";
+            std::cin >> year;
 
-
-
-    }
+            if (day > 0 && day = < 31 mounth > 0 && mounth = < 12 &&  year )
+                std::cout << "Podałeś dobrą datę";
+            
 int main()
 {   
     //task1();
