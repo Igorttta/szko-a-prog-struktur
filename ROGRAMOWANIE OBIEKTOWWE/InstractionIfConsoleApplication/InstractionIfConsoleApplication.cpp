@@ -1,11 +1,6 @@
 ﻿#include <iostream>
 
-/*
 
-
-
-
-*/
 /*
 
 Priorytety operatorów:
@@ -271,54 +266,89 @@ powyżej 40.0 - otyłość skrajną
     std::cout << "Podaj wzrost w centymetrach ";
     std::cin >> bodyHeight;
 
-  BMI = bodyWeight / (bodyHeight * bodyHeight );
-    if (BMI < 16)
+   float bmi = bodyWeight / (bodyHeight * bodyHeight );
+    if (bmi < 16)
         std::cout << "jestes wygłodzony";
-    else if (BMI >= 16 && BMI <= 16.99)
+    else if (bmi >= 16 && bmi <= 16.99)
         std::cout << "jestes wychudzony";
 
-    else if (BMI >= 17 && BMI <= 18.49)
+    else if (bmi >= 17 && bmi <= 18.49)
         std::cout << "masz niedowagę";
 
-    else if (BMI >= 18.5 && BMI <= 24.99)
+    else if (bmi >= 18.5 && bmi <= 24.99)
         std::cout << "masz wage prawidłową";
 
-    else if (BMI >= 25.0 && BMI <= 29.9)
+    else if (bmi >= 25.0 && bmi <= 29.9)
         std::cout << "masz nadwagę";
 
-    else if (BMI >= 30.0 && BMI <= 34.99)
+    else if (bmi >= 30.0 && bmi <= 34.99)
         std::cout << "masz 1 stopień otyłości ";
 
-    else if (BMI >= 35.0 && BMI <= 39.99)
+    else if (bmi >= 35.0 && bmi <= 39.99)
         std::cout << "masz 2 stopień otyłości";
 
-    else if (BMI < 40)
+    else if (bmi < 40)
         std::cout << "masz 3 stopień otyłości ";
 
 }
 //Napisz program, który poprosi użytkownika o podanie liczby od 1 do 7 i wyświetli odpowiadający mu dzień tygodnia.
-void task10()
-{
-    int  daysOfTheWeek;
-    std::cout << "Napisz liczbę od 1 do 7";
-    std::cin >> daysOfTheWeek;
-    if (daysOfTheWeek == 1)
-        std::cout << "Jest POniedziałek";
-    else if (daysOfTheWeek == 2)
-        std::cout << "Jest  Wtorek ";
-    else if (daysOfTheWeek == 3)
-        std::cout << "Jest  Środa ";
-    else if (daysOfTheWeek == 4)
-        std::cout << "Jest  Czwartek ";
-    else if (daysOfTheWeek == 5)
-        std::cout << "Jest  Piątek ";
-    else if (daysOfTheWeek == 6)
-        std::cout << "Jest  Sobota ";
-    else if (daysOfTheWeek == 7)
-        std::cout << "Jest  NIedziela ";
-    }
+ void task10()
+ {
+     int  daysOfTheWeek;
+     std::cout << "Napisz liczbę od 1 do 7";
+     std::cin >> daysOfTheWeek;
+     if (daysOfTheWeek == 1)
+         std::cout << "Jest POniedziałek";
+     else if (daysOfTheWeek == 2)
+         std::cout << "Jest  Wtorek ";
+     else if (daysOfTheWeek == 3)
+         std::cout << "Jest  Środa ";
+     else if (daysOfTheWeek == 4)
+         std::cout << "Jest  Czwartek ";
+     else if (daysOfTheWeek == 5)
+         std::cout << "Jest  Piątek ";
+     else if (daysOfTheWeek == 6)
+         std::cout << "Jest  Sobota ";
+     else if (daysOfTheWeek == 7)
+         std::cout << "Jest  NIedziela ";
 
-
+     switch (daysOfTheWeek)
+     {
+     case 1:
+         std::cout << "Jest POniedziałek";
+         break;
+     
+     
+     case 2:
+         std::cout << "Jest wtorek";
+         break;
+     
+     
+     case 3:
+         std::cout << "Jest Środa";
+         break;
+     
+     
+     case 4:
+         std::cout << "Jest Czwartek";
+         break;
+     
+     
+     case 5:
+         std::cout << "Jest Piątek";
+         break;
+     
+     
+     case 6:
+         std::cout << "Jest Sobota";
+         break;
+     
+     
+     case 7:
+         std::cout << "Jest niedziela";
+         break;
+         
+ }
 
 
 
@@ -356,10 +386,18 @@ void task11()
     
 
 }
-//Napisz program, który popro 
+//Napisz program, który poprosi użytkownika o podanie roku i sprawdzi, czy jest to rok przestępny.Wyświetl odpowiedni komunikat.
 void task12()
 {
-       
+    int year;
+    std::cout << "Podaj rok";
+    std::cin >> year;
+    int leapYear = year / 4;
+
+    if (year == leapYear)
+        std::cout << "Rok jest przestępny ";
+    else
+        std::cout << "rok nie jest przestępny";
 }
 //Napisz program, który poprosi użytkownika o podanie liczby całkowitej i obliczy jej wartość bezwzględną.Wyświetl wynik.
  
@@ -409,17 +447,20 @@ void task13()
             std::cout << "POdaj bok trójkąta";
             std::cin >>  thirdSideOfTheTriangle;
              
-            if (firstSideOfTheTriangle > secondSideOfTheTriangle && thirdSideOfTheTriangle)
+            if (firstSideOfTheTriangle > secondSideOfTheTriangle && thirdSideOfTheTriangle < firstSideOfTheTriangle)
                 std::cout << "możesz zrobic trójkąt";
 
-            if (secondSideOfTheTriangle > firstSideOfTheTriangle && thirdSideOfTheTriangle)
-                std::cout << " nie możesz zrobic trójkąt";
+            if (firstSideOfTheTriangle > firstSideOfTheTriangle && thirdSideOfTheTriangle)
+                std::cout << "  możesz zrobic trójkąt";
             
             if (thirdSideOfTheTriangle > secondSideOfTheTriangle && firstSideOfTheTriangle)
 
             
-                std::cout << " nie możesz zrobic trójkąt";
-
+                std::cout << "  możesz zrobic trójkąt";
+            else
+            {
+                std::cout << " nie mozesz zrobic trójkoąta";
+            }
              
 
    }
@@ -429,57 +470,49 @@ void task13()
 
     {
         int percentage;
-        
+
         std::cout << "Podaj procent od 0 do 100";
         std::cin >> percentage;
 
-        if (percentage >= 0  && percentage =< 33 )
-            std::cout << " jest to 1"
-        else if (percentage > 33 && percentage =<44  )
-            std::cout << "jest to 2"
-        else if (percentage > 44 && percentage = < 70)
-            std::cout << "jest to 3"
-        else if (percentage > 70 && percentage = <85 )
-            std::cout << "jest to 4"
-        else if (percentage > 85 && percentage = < 99)
-            std::cout << "jest to 5"
+        if (percentage >= 0 && percentage <= 33)
+            std::cout << " jest to 1";
+        else if (percentage > 33 && percentage <= 44)
+            std::cout << "jest to 2";
+        else if (percentage > 44 && percentage <= 70)
+            std::cout << "jest to 3";
+        else if (percentage > 70 && percentage <= 85)
+            std::cout << "jest to 4";
+        else if (percentage > 85 && percentage <= 99)
+            std::cout << "jest to 5";
         else if (percentage == 100)
-            std::cout << "jest to 6"
-    }
-
-
-
+            std::cout << "jest to 6";
     }
     //Pogram wyświetlający odpowiedni komunikat w zależności od podanej oceny(np. "bardzo dobry" dla oceny 5, "dobry" dla oceny 4 itd.)
 
     void task17()
     {
-        int oceny;
+        int rating;
         std::cout << "Podaj ocene";
-            std::cin >> oceny;
+            std::cin >> rating;
 
-            if (oceny ==6)
-                std::cout << "celujácy"
-                else if (oceny == 5)
-                    std::cout << "bardzo dobry"
-                    else if (oceny == 4)
-                        std::cout << "dobry"
-                        else if (oceny == 3)
-                            std::cout << "dostateczny"
-                            else if (oceny == 2)
-                                std::cout << "dopuszczajácy "
-                                else if (oceny == 1)
-                                    std::cout << "niedostateczny"
+            if (rating == 6)
+                std::cout << "celujácy";
+            else if (rating == 5)
+                std::cout << "bardzo dobry";
+            else if (rating == 4)
+                std::cout << "dobry";
+            else if (rating == 3)
+                std::cout << "dostateczny";
+            else if (rating == 2)
+                std::cout << "dopuszczajácy ";
+            else if (rating == 1)
+                std::cout << "niedostateczny";
     }
     //Napisz program, który na podstawie współczynników równania kwadratowego(a, b, c) sprawdzi, czy to równanie ma rozwiązania rzeczywiste, i jeśli tak, to je obliczy.
 
     void task18()
-    {
-
-vbdbd
-
-    }
-    //Program sprawdzający czy podana data jest poprawna(np.sprawdzając, czy dzień jest z zakresu od 1 do 31, miesiąc od 1 do 12 itd.)
+    { }
+   //Program sprawdzający czy podana data jest poprawna(np.sprawdzając, czy dzień jest z zakresu od 1 do 31, miesiąc od 1 do 12 itd.)
     void task19()
     {
         int mounth, day, year;
@@ -490,11 +523,11 @@ vbdbd
             std::cout << "POdaj rok";
             std::cin >> year;
 
-            if (day > 0 && day = < 31 mounth > 0 && mounth = < 12 &&  year )
+            if (day >=  1 && day <= 31  && mounth >= 1 && mounth <= 12 &&  year )
                 std::cout << "Podałeś dobrą datę";
             
-int main()
-{   
+            int main();
+{
     //task1();
     //task2(); 
     //task3();
@@ -502,7 +535,7 @@ int main()
     //task5();
    // task6();
     //task7();
-    //task8();
+    task8();
     //task9();
     //task10();
     //task11();
@@ -512,9 +545,8 @@ int main()
     //task14();
     //task15();
     //task16();
-    task17();
+    //task17();
     //task18();
     //task19();
-
 }
 
