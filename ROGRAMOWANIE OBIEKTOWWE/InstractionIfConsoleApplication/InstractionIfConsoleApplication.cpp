@@ -317,39 +317,38 @@ powyżej 40.0 - otyłość skrajną
      case 1:
          std::cout << "Jest POniedziałek";
          break;
-     
-     
+
+
      case 2:
          std::cout << "Jest wtorek";
          break;
-     
-     
+
+
      case 3:
          std::cout << "Jest Środa";
          break;
-     
-     
+
+
      case 4:
          std::cout << "Jest Czwartek";
          break;
-     
-     
+
+
      case 5:
          std::cout << "Jest Piątek";
          break;
-     
-     
+
+
      case 6:
          std::cout << "Jest Sobota";
          break;
-     
-     
+
+
      case 7:
          std::cout << "Jest niedziela";
          break;
-         
+     }
  }
-
 
 
 //Napisz program, który wczyta numer miesiąca i wyświetli jego słowny odpowiednik.
@@ -383,8 +382,6 @@ void task11()
         std::cout << "Jest  Listopad ";
     else if (Mounth == 12)
         std::cout << "Jest  grudzien ";
-    
-
 }
 //Napisz program, który poprosi użytkownika o podanie roku i sprawdzi, czy jest to rok przestępny.Wyświetl odpowiedni komunikat.
 void task12()
@@ -511,21 +508,37 @@ void task13()
     //Napisz program, który na podstawie współczynników równania kwadratowego(a, b, c) sprawdzi, czy to równanie ma rozwiązania rzeczywiste, i jeśli tak, to je obliczy.
 
     void task18()
-    { }
+    {
+    
+    
+    
+    
+    
+    
+    }
    //Program sprawdzający czy podana data jest poprawna(np.sprawdzając, czy dzień jest z zakresu od 1 do 31, miesiąc od 1 do 12 itd.)
     void task19()
     {
         int mounth, day, year;
-            std::cout << "POdaj dzień";
-            std::cin >> day;
-            std::cout << "POdaj miesiąc";
-            std::cin >> mounth;
-            std::cout << "POdaj rok";
-            std::cin >> year;
+        std::cout << "POdaj dzień";
+        std::cin >> day;
+        std::cout << "POdaj miesiąc";
+        std::cin >> mounth;
+        std::cout << "POdaj rok";
+        std::cin >> year;
 
-            if (day >=  1 && day <= 31  && mounth >= 1 && mounth <= 12 &&  year )
-                std::cout << "Podałeś dobrą datę";
-            
+        if (day >= 1 && day <= 31 && mounth >= 1 && mounth <= 12 && year)
+            std::cout << "Podałeś dobrą datę";
+
+        void task20()
+
+        {
+        
+        
+        
+        
+        
+        }
             int main();
 {
     //task1();
@@ -538,7 +551,7 @@ void task13()
     task8();
     //task9();
     //task10();
-    //task11();
+    //task11():
     //task12();
     //task13();
     //task13();
@@ -548,5 +561,6 @@ void task13()
     //task17();
     //task18();
     //task19();
+    //task20();
 }
 
