@@ -532,13 +532,6 @@ void task13()
 
         void task20()
 
-        {
-        
-        
-        
-        
-        
-        }
             int main();
 {
     //task1();
@@ -548,7 +541,7 @@ void task13()
     //task5();
    // task6();
     //task7();
-    task8();
+    //task8();
     //task9();
     //task10();
     //task11():
