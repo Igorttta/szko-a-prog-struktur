@@ -3,12 +3,8 @@
 
 #include <iostream>
 
-int main()
-{
-	task1();
-}
 
-
+//Napisz program który wylosuje liczbê a nastêpnie urztykownik bêdzi musia³ j¹ zgadn¹æ 
 void task1()
 {
 	/*
@@ -38,6 +34,45 @@ void task1()
 	std::cout << "POdajno liczbe" << number ;
 	}
 
+void task2()
+{
+	int randomNumber;
+
+	srand(time(0));
+	randomNumber = rand() % 101 ;
+
+	int numberFromUser;
+	/*
+	std::cout << "Podaj liczbe ";
+	std::cin >> numberFromUser;
+	if (numberFromUser != randomNumber)
+	{
+		std::cout << "POdaj liczbê ";
+		std::cin >> numberFromUser;
+		if (numberFromUser != randomNumber)
+		{
+			//...
+		}
+		*/
+	do
+	{
+		std::cout << "Podaj liczbe ";
+		std::cin >> numberFromUser;
+		if (numberFromUser > randomNumber)
+			std::cout << "Za duza liczba\n";
+		if (numberFromUser < randomNumber)
+			std::cout << "Za ma³a  liczba\n";
+	} while (numberFromUser != randomNumber);
+			std::cout << " Gratulacje!!!\n ";
+		
+	
+}
+
+int main()
+{
+	//task1();
+	task2();
+}
 
 
 
