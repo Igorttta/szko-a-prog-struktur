@@ -28,39 +28,34 @@ void task1()
 				//...
 
 			}
-		
-		
+
+
 		}
-	 }  
+	 }
 	 */
 }
 
-while (number > 9)
+	void task2()
 	{
-		number = number / 10;
-		numberOfDigit++ ;
-	}
-void task2()
-{
-	int a;
-	std::cout << "POdaj  pierwsza liczbê";
-	std::cin >> a;
+		int a;
+		std::cout << "POdaj  pierwsza liczbê";
+		std::cin >> a;
 
-	int b;
-	std::cout << "POdaj  drug¹ liczbê";
-	std::cin >> b;
-	if (b != 0)
-	{
-		int tmpA = a;
-		a = b;
+		int b;
+		std::cout << "POdaj  drug¹ liczbê";
+		std::cin >> b;
 		if (b != 0)
 		{
-			//..
+			int tmpA = a;
+			a = b;
+			if (b != 0)
+			{
+				//..
+			}
 		}
+
+
 	}
-
-
-}
 
 int main()
 {
