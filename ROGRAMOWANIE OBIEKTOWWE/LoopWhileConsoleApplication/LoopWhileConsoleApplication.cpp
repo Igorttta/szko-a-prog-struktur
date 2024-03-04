@@ -7,7 +7,7 @@ void task1()
 {
 	int number;
 	do
-	{
+	{h
 		std::cout << "podaj liczbê dodatni¹\n ";
 		std::cin >> number;
 	} while (number < 0);
