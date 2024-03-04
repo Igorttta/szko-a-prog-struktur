@@ -18,7 +18,7 @@ void task1()
 	{
 		number = number / 10;
 		numberOfDigit++;
-		if (number > 9)
+		if (number > 9)hg
 		{
 			number = number / 10;
 			numberOfDigit++;
