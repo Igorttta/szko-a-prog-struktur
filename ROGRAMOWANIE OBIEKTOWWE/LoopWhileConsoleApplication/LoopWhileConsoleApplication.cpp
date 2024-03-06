@@ -7,7 +7,7 @@ void task1()
 {
 	int number;
 	do
-	{h
+	{
 		std::cout << "podaj liczbê dodatni¹\n ";
 		std::cin >> number;
 	} while (number < 0);
@@ -44,6 +44,7 @@ void task1()
 		int b;
 		std::cout << "POdaj  drug¹ liczbê";
 		std::cin >> b;
+		/*
 		if (b != 0)
 		{
 			int tmpA = a;
@@ -53,14 +54,45 @@ void task1()
 				//..
 			}
 		}
+		*/
 
-
+		while (b != 0)
+		{
+			int tmpA = a;
+			a = b;
+			b = tmpA % b;
+		}
+		std::cout << "NWD =" << a << "\n";
 	}
+	//Miasto T. ma obecnie 100 tys. mieszkañców, ale jego populacja roœnie co roku o 3% rocznie. 
+//Miasto B. ma 300 tys. mieszkañców i ta liczba roœnie w tempie 2% na rok.
+// Wykonaj symulacjê prezentuj¹c¹ liczbê mieszkañców w obu miastach i zatrzymuj¹c¹ siê, 
+// gdy liczba mieszkañców miasta T. przekroczy liczbê z miasta B.
+	void task3()
+	{
+		double cityT = 100000;
+		double cityB = 300000;
+		 int year = 0;
 
+		while (cityT > cityB)
+		{
+			double cityT = cityT  * 1.03;
+			double cityB = cityB * 1.02;
+			year++;
+		}
+		std::cout << cityT;
+		std::cout << cityB;
+		std::cout << "Miasto T przebi³o w liczbie mieszkañców " << year << "latach";
+	
+	
+	
+	
+	}
 int main()
 {
-	task1();
-	task2();
+	//task1();
+	//task2();
+	task3();
 
 }
 
