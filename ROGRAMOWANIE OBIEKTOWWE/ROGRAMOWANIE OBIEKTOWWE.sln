@@ -17,6 +17,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LoopDoWhileConsoleApplicati
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LoopWhileConsoleApplication", "LoopWhileConsoleApplication\LoopWhileConsoleApplication.vcxproj", "{B0DADAA1-3BB1-4E82-A0A8-C95F29498C6B}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LoopForConsoleApplication", "LoopForConsoleApplication\LoopForConsoleApplication.vcxproj", "{3DC553C3-0BB0-4995-93BD-4324F6B2E7A3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -65,6 +67,14 @@ Global
 		{B0DADAA1-3BB1-4E82-A0A8-C95F29498C6B}.Release|x64.Build.0 = Release|x64
 		{B0DADAA1-3BB1-4E82-A0A8-C95F29498C6B}.Release|x86.ActiveCfg = Release|Win32
 		{B0DADAA1-3BB1-4E82-A0A8-C95F29498C6B}.Release|x86.Build.0 = Release|Win32
+		{3DC553C3-0BB0-4995-93BD-4324F6B2E7A3}.Debug|x64.ActiveCfg = Debug|x64
+		{3DC553C3-0BB0-4995-93BD-4324F6B2E7A3}.Debug|x64.Build.0 = Debug|x64
+		{3DC553C3-0BB0-4995-93BD-4324F6B2E7A3}.Debug|x86.ActiveCfg = Debug|Win32
+		{3DC553C3-0BB0-4995-93BD-4324F6B2E7A3}.Debug|x86.Build.0 = Debug|Win32
+		{3DC553C3-0BB0-4995-93BD-4324F6B2E7A3}.Release|x64.ActiveCfg = Release|x64
+		{3DC553C3-0BB0-4995-93BD-4324F6B2E7A3}.Release|x64.Build.0 = Release|x64
+		{3DC553C3-0BB0-4995-93BD-4324F6B2E7A3}.Release|x86.ActiveCfg = Release|Win32
+		{3DC553C3-0BB0-4995-93BD-4324F6B2E7A3}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -75,6 +85,7 @@ Global
 		{6CB04589-E674-421A-8DB2-D64AFB6E36F9} = {218C7671-5B81-49C3-ADAD-236F4A11DC3B}
 		{D760C260-55BC-4817-A3AD-D2089AD91A66} = {218C7671-5B81-49C3-ADAD-236F4A11DC3B}
 		{B0DADAA1-3BB1-4E82-A0A8-C95F29498C6B} = {218C7671-5B81-49C3-ADAD-236F4A11DC3B}
+		{3DC553C3-0BB0-4995-93BD-4324F6B2E7A3} = {218C7671-5B81-49C3-ADAD-236F4A11DC3B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2C035C71-88A0-4789-9C50-84356B8250A0}
