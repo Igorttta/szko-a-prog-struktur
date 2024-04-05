@@ -39,7 +39,7 @@ else
 }
 */
 //napisz program któy poprosi o twoje imie i ciê przywita
- void task2()
+void task2()
 {
 	std::string name;
 	std::cout << "POdja swoje imie";
@@ -49,52 +49,90 @@ else
 
 
 }
- void task3()
- {
-	 std::string password;
-	 std::cout << "POdja swoje haslo";
-	 std::cin >> password;
- 
-	 if (password == "abc123" )
-	 {
-		 std::cout << "Dobre haslo";
-	 }
-	 else
-	 {
-		 std::cout << "Zle haslo";
-	 }
- 
- 
- }
- void task4()
- {
-	 std::string textFromUser;
-	 std::cout << "POdja swoje  podaj ci¹g znaków";
-	 std::cin >> textFromUser;
+void task3()
+{
+	std::string password;
+	std::cout << "POdja swoje haslo";
+	std::cin >> password;
 
-	 std::cout << "POdany text" << textFromUser;
-	 std::cout << "POdany text" << textFromUser[0];
-	 std::cout << "POdany text" << textFromUser[1];
-	 int length = textFromUser.length();
-	 std::cout << "D³ugoœæ ³añcucha znaków " << length;
-	 std::cout << "D³ugoœæ ³añcucha znaków " << textFromUser[length  - 1];
-
-	 int couter = 0;
-	 for (int  i = 0; i < length; i++)
-	 {
-		 if (textFromUser[i] == 'a')
-		 counter++
-	 }
-	 
+	if (password == "abc123")
+	{
+		std::cout << "Dobre haslo";
+	}
+	else
+	{
+		std::cout << "Zle haslo";
+	}
 
 
+}
+void task4()
+{
+	
+	std::string textFromUser;
+	std::cout << "POdja swoje  podaj ci¹g znaków";
+	std::cin >> textFromUser;
+
+	std::cout << "POdany text" << textFromUser;
+	std::cout << "POdany text" << textFromUser[0];
+	std::cout << "POdany text" << textFromUser[1];
+	int length = textFromUser.length();
+	std::cout << "D³ugoœæ ³añcucha znaków " << length;
+	std::cout << "D³ugoœæ ³añcucha znaków " << textFromUser[ length  - 1];
+
+	int counter = 0;
+	for (int  i = 0; i < length; i++)
+	{
+		if (textFromUser[i] == 'a')
+			counter++;
+	}
+	std::cout << "fjsif";
 
 
- }
+
+
+
+}
+void task5()
+{
+	std::string password;
+	do
+	{
+		std::cout << "POdaj has³o";
+		std::cin >> password;
+	} while ( password != "abc123");
+	std::cout << "POda³eœ dobre has³o ";
+	
+
+
+
+}
+void task6()
+{
+	std::string textFromUser;
+	std::cout << "POdja swoje  podaj ci¹g znaków";
+	std::cin >> textFromUser;
+
+	std::string rii = "a" "o" "u" "e" "i" "y";
+	int length = textFromUser.length();
+	std::cout << "D³ugoœæ ³añcucha znaków " << length;
+	std::cout << "D³ugoœæ ³añcucha znaków " << textFromUser[length - 1];
+
+	int counter = 0;
+	for (int i = 0; i < length; i++)
+	{
+		if (textFromUser[i] == 'a')
+			counter++;
+	}
+	std::cout << "fjsif";
+
+
+
+}
 int main()
 {
 	//task1();
-	task4();
+	task5();
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
