@@ -66,10 +66,35 @@ else
  
  
  }
+ void task4()
+ {
+	 std::string textFromUser;
+	 std::cout << "POdja swoje  podaj ci¹g znaków";
+	 std::cin >> textFromUser;
+
+	 std::cout << "POdany text" << textFromUser;
+	 std::cout << "POdany text" << textFromUser[0];
+	 std::cout << "POdany text" << textFromUser[1];
+	 int length = textFromUser.length();
+	 std::cout << "D³ugoœæ ³añcucha znaków " << length;
+	 std::cout << "D³ugoœæ ³añcucha znaków " << textFromUser[length  - 1];
+
+	 int couter = 0;
+	 for (int  i = 0; i < length; i++)
+	 {
+		 if (textFromUser[i] == 'a')
+		 counter++
+	 }
+	 
+
+
+
+
+ }
 int main()
 {
 	//task1();
-	task2();
+	task4();
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
