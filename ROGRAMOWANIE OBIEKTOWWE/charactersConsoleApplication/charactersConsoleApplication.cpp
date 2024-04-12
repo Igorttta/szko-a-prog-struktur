@@ -183,6 +183,7 @@ void task8()
 	{
 		std::cout << "NIE jest palindromem";
 	}
+
 	int main()
 	{
 		task7();

@@ -25,6 +25,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "03.kolekcje", "03.kolekcje"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "charactersConsoleApplication", "charactersConsoleApplication\charactersConsoleApplication.vcxproj", "{B8BE63B5-A717-471E-B472-C3C1FE9B1707}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ArrayConsoleApplication", "ArrayConsoleApplication\ArrayConsoleApplication.vcxproj", "{76CAA40B-C7E0-4CE9-8DBC-CA7D8A1EEB28}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -89,6 +91,14 @@ Global
 		{B8BE63B5-A717-471E-B472-C3C1FE9B1707}.Release|x64.Build.0 = Release|x64
 		{B8BE63B5-A717-471E-B472-C3C1FE9B1707}.Release|x86.ActiveCfg = Release|Win32
 		{B8BE63B5-A717-471E-B472-C3C1FE9B1707}.Release|x86.Build.0 = Release|Win32
+		{76CAA40B-C7E0-4CE9-8DBC-CA7D8A1EEB28}.Debug|x64.ActiveCfg = Debug|x64
+		{76CAA40B-C7E0-4CE9-8DBC-CA7D8A1EEB28}.Debug|x64.Build.0 = Debug|x64
+		{76CAA40B-C7E0-4CE9-8DBC-CA7D8A1EEB28}.Debug|x86.ActiveCfg = Debug|Win32
+		{76CAA40B-C7E0-4CE9-8DBC-CA7D8A1EEB28}.Debug|x86.Build.0 = Debug|Win32
+		{76CAA40B-C7E0-4CE9-8DBC-CA7D8A1EEB28}.Release|x64.ActiveCfg = Release|x64
+		{76CAA40B-C7E0-4CE9-8DBC-CA7D8A1EEB28}.Release|x64.Build.0 = Release|x64
+		{76CAA40B-C7E0-4CE9-8DBC-CA7D8A1EEB28}.Release|x86.ActiveCfg = Release|Win32
+		{76CAA40B-C7E0-4CE9-8DBC-CA7D8A1EEB28}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -102,6 +112,7 @@ Global
 		{3DC553C3-0BB0-4995-93BD-4324F6B2E7A3} = {218C7671-5B81-49C3-ADAD-236F4A11DC3B}
 		{D9FA5B40-3B92-4614-B5A0-B9BEE5DC06DD} = {218C7671-5B81-49C3-ADAD-236F4A11DC3B}
 		{B8BE63B5-A717-471E-B472-C3C1FE9B1707} = {76DC0B3C-142F-46B7-AAEF-8A617227BBB9}
+		{76CAA40B-C7E0-4CE9-8DBC-CA7D8A1EEB28} = {76DC0B3C-142F-46B7-AAEF-8A617227BBB9}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2C035C71-88A0-4789-9C50-84356B8250A0}
