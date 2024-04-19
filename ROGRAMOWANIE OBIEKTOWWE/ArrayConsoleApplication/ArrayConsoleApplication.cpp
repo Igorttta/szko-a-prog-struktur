@@ -26,12 +26,74 @@ void task2()
 	int numbers[ARRAY_NUMBERS_SIZE];
 
 	srand(time(NULL));
+	std::cout << "Liczby w kolekcji:\n";
+	for (int i = 0; i < ARRAY_NUMBERS_SIZE; i++)
+	{
+		numbers[i] = rand() % 11;
+		std::cout << numbers[i] << ", ";
+	}
+	std::cout << "\n\n";
+
+	//liczê œredni¹
+	int sum = numbers[0];
+	for (int i = 1; i < ARRAY_NUMBERS_SIZE; i++)
+	{
+		sum = sum + numbers[i];
+		//sum += numbers[i];
+	}
+
+	double avg = sum * 1.0 / ARRAY_NUMBERS_SIZE;
+
+	std::cout << "Suma: " << sum << "\n";
+	std::cout << "Œrednia to: " << avg << "\n";
+
+}
+void task3()
+{
+	const unsigned int ARRAY_NUMBERS_SIZE = 10;
+	int numbers[ARRAY_NUMBERS_SIZE];
+
+	srand(time(NULL));
 	std::cout << "liczby w kolekcji:";
 	for (int i = 0; i < ARRAY_NUMBERS_SIZE; i++)
 	{
 		numbers[i] = rand() % 101;
 		std::cout << numbers[i] << " , ";
 	}
+	int max = numbers[0];
+	for (int i = 1; i < ARRAY_NUMBERS_SIZE; i++)
+	{
+		if (numbers[i] > max)
+		{
+			max = numbers[i];
+		}
+	}
+	std::cout << "NAjwiêksza liczba to " << max << "\n";
+
+	int min = numbers[0];
+	for (int i = 1; i < ARRAY_NUMBERS_SIZE; i++)
+	{
+		if (numbers[i] < min)
+		{
+			min = numbers[i];
+		}
+	}
+	std::cout << "NAjwiêksza liczba to " << min << "\n";
+
+}
+//Napisz program który wczyta numer dnia tygodnia a nastêpnie wtœwietl nazswê tego dnia lub komunikat b³edu 
+
+void task4()
+{
+	int numberFromUser;
+	std::cout << "Podaj numer dnia tygodnia ";
+	std::cin >> numberFromUser;
+
+
+	for (int i = 0; i <= 7; i++)
+	{
+	}
+	std::cout << " b³¹d";
 
 
 }
@@ -39,7 +101,7 @@ void task2()
 
 int main()
 {
-	task2();
+	task3();
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
