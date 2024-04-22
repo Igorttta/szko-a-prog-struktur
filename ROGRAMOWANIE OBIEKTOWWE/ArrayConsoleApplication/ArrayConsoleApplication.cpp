@@ -20,6 +20,7 @@ void task1()
 
 
 }
+//Napisz program obliczaj¹cy œredni¹ arytmetyczn¹ elementów w tablicy liczb ca³kowitych.   
 void task2()
 {
 	const unsigned int ARRAY_NUMBERS_SIZE = 5;
@@ -30,7 +31,7 @@ void task2()
 	for (int i = 0; i < ARRAY_NUMBERS_SIZE; i++)
 	{
 		numbers[i] = rand() % 11;
-		std::cout << numbers[i] << ", ";
+		std::cout << numbers[i] << ".\n ";
 	}
 	std::cout << "\n\n";
 
@@ -48,6 +49,8 @@ void task2()
 	std::cout << "Œrednia to: " << avg << "\n";
 
 }
+//Napisz program, który uzupe³ni tablicê liczbami losowymi
+// a nastêpnie znajdzie minimum oraz maksimum.
 void task3()
 {
 	const unsigned int ARRAY_NUMBERS_SIZE = 10;
@@ -85,24 +88,68 @@ void task3()
 
 void task4()
 {
-	int numberFromUser;
-	std::cout << "Podaj numer dnia tygodnia ";
-	std::cin >> numberFromUser;
+	int dayNumberFromUser;
+	std::cout << "Podaj numer dnia tygodnia:\n";
+	std::cin >> dayNumberFromUser;
 
+	std::string nameOfDayInWeek[7] = { "Poniedzia³ek", "Wtorek", };
+	nameOfDayInWeek[0] = "Poniedzia³ek";
+	nameOfDayInWeek[1] = "Wtorek";
+	nameOfDayInWeek[2] = "Œroda";
+	nameOfDayInWeek[3] = "Czwartek";
+	nameOfDayInWeek[4] = "Pi¹tek";
+	nameOfDayInWeek[5] = "Sobota";
+	nameOfDayInWeek[6] = "Niedziela";
 
-	for (int i = 0; i <= 7; i++)
+	if (dayNumberFromUser >= 0 && dayNumberFromUser <= 6)
 	{
+		std::cout << "Nazwa dnia to " << nameOfDayInWeek[dayNumberFromUser] << "\n";
 	}
-	std::cout << " b³¹d";
-
-
+	else
+	{
+		std::cout << "Nie ma takiego dnia\n";
+	}
 }
-#include <iostream>
+void task5()
+{
+	const unsigned int ARRAY_NUMBERS_SIZE = 10;
+	int numbers[ARRAY_NUMBERS_SIZE];
 
+	srand(time(NULL));
+	std::cout << "Liczby w kolekcji:\n";
+	for (int i = 0; i < ARRAY_NUMBERS_SIZE; i++)
+	{
+		numbers[i] = rand() % 100;
+		std::cout << numbers[i] << ", ";
+	}
+	std::cout << "\n\n";
+
+	//algorytm sortuj¹cy
+	for (int i = 0; i <= ARRAY_NUMBERS_SIZE - 2; i++)
+	{
+		int minIndex = i;
+		for (int j = i + 1; j < ARRAY_NUMBERS_SIZE; j++)
+		{
+			if (numbers[j] < numbers[minIndex])
+				minIndex = j;
+		}
+		int tmp = numbers[i];
+		numbers[i] = numbers[minIndex];
+		numbers[minIndex] = tmp;
+	}
+
+	std::cout << "Po posortowaniu:\n";
+	for (int i = 0; i < ARRAY_NUMBERS_SIZE; i++)
+	{
+		std::cout << numbers[i] << ", ";
+	}
+	std::cout << "\n\n";
+}
 int main()
 {
-	task3();
+	task5();
 }
+
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
 // Debug program: F5 or Debug > Start Debugging menu
