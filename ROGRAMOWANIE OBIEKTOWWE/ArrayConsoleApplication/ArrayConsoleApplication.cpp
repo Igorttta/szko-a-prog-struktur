@@ -145,9 +145,38 @@ void task5()
 	}
 	std::cout << "\n\n";
 }
+void task6()
+{
+	const  int ARRAY_NUMBERS_SIZE = 50;
+	bool sieve[ARRAY_NUMBERS_SIZE];
+	for (int i = 2; i < ARRAY_NUMBERS_SIZE; i++)
+	{
+		sieve[i] = true;
+	}
+	for (int i = 2; i < ARRAY_NUMBERS_SIZE; i++)
+	{
+		if (sieve[i] /* == true*/)
+		{
+			for (int j = i + i; j < ARRAY_NUMBERS_SIZE;j = j + i)
+			{
+				sieve[j] = false;
+			}
+		}
+	}
+		std::cout << "liczby pierwsze ";
+		for (int i = 2; i < ARRAY_NUMBERS_SIZE; i++)
+		{
+			if (sieve[i] /*== true*/)
+			{
+				std::cout << i << ";";
+			}
+		}
+	
+
+}
 int main()
 {
-	task5();
+	task6();
 }
 
 
