@@ -1,6 +1,10 @@
 // FIRST.ConsoleApplication1.cpp : This file contains the 'main' function. Program execution begins and ends there.
 //
+/*
+dry don t reapet yourself
+KISS ketp in simple , stupid trzymaj prostotê g³upcze 
 
+*/
 #include <iostream>
 
 int main()
