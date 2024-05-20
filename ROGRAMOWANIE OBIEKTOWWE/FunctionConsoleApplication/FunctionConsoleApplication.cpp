@@ -1,20 +1,67 @@
-// FunctionConsoleApplication.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
 
 #include <iostream>
 
+/*
+
+Funkcja - zbiór instrukcji. Definicja/deklaracja funkcji sk³ada siê z dwóch czêœci:
+* nagówek - sposób u¿ycia funkcji
+	- typ zwracany
+	- nazwa (poprawny identyfikator)
+	- parametrów w nawiasie (nieobowi¹znowe)
+* cia³o - zbiór instrukcji
+
+typZwracany nazwaFuncji(parametry)
+{
+	//cia³o funcji
+}
+*/
+
+/*
+
+void showHello()
+{
+	std::wcout << "hello world";
+}
+void showWelcome(std::string n)
+{
+
+	std::cout << "siema";
+}
+void showWelcome(std::string n, int w)
+{
+	showWelcome(n);
+	std::cout << "wiek to " << w;
+}
+void showWelcome(std::string n, int w, std::string a)
+{
+	showWelcome(n, w);
+	std::cout << "Adres to " << a << "\n";
+
+}
+*/
+
+void paraeterTest(int& p)
+{
+	std::cout << "Wartoœæ parametru " << p;
+	p++;
+	std::cout << "Wartoœæ parametru " << p;
+
+
+}
 int main()
 {
-    std::cout << "Hello World!\n";
+	showHello();
+
+
+	std::string name;
+	name = "MAciek";
+	showWelcome(name);
+	name = "Jan";
+	showWelcome(name);
+	showWelcome("Anna");
+	showWelcome("maciuœ"), 9, "[redacted]";
+
+int varieble = 5;
+std::cout << "Wartoœæ zmiennej przed fukvcj¹" << variable;
+
 }
-
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
-
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
