@@ -1,21 +1,47 @@
-//Napisz program który pobirze wspó³rzêdne 2D i obliczy jak daleko jesy ten punkt od srodka uk³adu wspó³rzêdnych 
 #include <iostream>
-void getCordinate(double& x, double& y)
+
+namespace task2Namespace
 {
-	std::cout << "POdaj x\n";
-	std::cin >> x;
+	struct point
+	{
+		double x;
+		double y;
+	};
 
-	std::cout << "POdaj y\n";
-	std::cin >> y;
+	void getCoordinate(double& x, double& y)
+	{
+		std::cout << "Podaj x\n";
+		std::cin >> x;
 
-}
-void task2()
-{
-	double x, y;
-	getCordinate(x, y);
+		std::cout << "Podaj y\n";
+		std::cin >> y;
+	}
+
+	void getCoordinate(point& p)
+	{
+		std::cout << "Podaj x\n";
+		std::cin >> p.x;
+
+		std::cout << "Podaj y\n";
+		std::cin >> p.y;
+	}
 
 
+	//Napisz program, który pobierze wspó³rzêdne 2D
+	//i obliczy jak daleko jest ten punkt od
+	// œrodka uk³adu wspó³rzêdnych.
+	void task2()
+	{
+		point firstPoint;
+		//point secondPoint;
+		//firstPoint.x = 5;
+		//double x, y;
 
-	double distance = sqrt(x * x + y * y);
-	std::cout << "odleg³oœc punktu do srodka" << distance;
+		//getCoordinate(firstPoint.x, firstPoint.y);
+		getCoordinate(firstPoint);
+
+		double distance = sqrt(firstPoint.x * firstPoint.x + firstPoint.y * firstPoint.y);
+
+		std::cout << "Odleg³oœæ od œrodka to: " << distance << "\n";
+	}
 }
