@@ -19,6 +19,7 @@ void task1()
     {
         writeInFiles << name;
         writeInFiles << "\n";
+        writeInFiles.flush();
         writeInFiles << age;
 
         writeInFiles.close();
@@ -26,9 +27,28 @@ void task1()
 
 
 }
+void task2()
+{
+    std::string name;
+    int age;
+    std::ifstream readFromFiles;
+    readFromFiles.open("c:\\dane.txt");
+
+    if (readFromFiles.is_open() == true)
+    {
+        readFromFiles >> name;
+        readFromFiles >> age;
+
+        std::cout << "Imie " << name << "Wiek" << age;
+        readFromFiles.close();
+    }
+
+
+}
+
 int main()
 {
-    std::cout << "Hello World!\n";
+    task2();
 }
 
 
