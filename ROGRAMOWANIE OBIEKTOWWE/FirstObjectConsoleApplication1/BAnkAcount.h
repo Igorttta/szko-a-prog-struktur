@@ -3,6 +3,7 @@
 
 class BankAccount
 {
+	private
 public:
 	double balance; // saldo
 	std::string owner; //w³aœciciel
