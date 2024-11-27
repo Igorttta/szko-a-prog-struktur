@@ -10,7 +10,7 @@ protected:
 	std::string currency; //waluta
 
 public:
-	void SetBalance (double b);
+	void SetBalance(double b);
 	void AccountInformation();
 
 	void DepositToAccount(double amount);

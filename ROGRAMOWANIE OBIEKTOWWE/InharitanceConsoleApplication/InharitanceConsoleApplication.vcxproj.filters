@@ -24,6 +24,9 @@
     <ClCompile Include="SavingBankAcount.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="zadanie.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BAnkAcount.h">

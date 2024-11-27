@@ -130,6 +130,7 @@
     <ClCompile Include="BankAcount.cpp" />
     <ClCompile Include="InharitanceConsoleApplication.cpp" />
     <ClCompile Include="SavingBankAcount.cpp" />
+    <ClCompile Include="zadanie.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BAnkAcount.h" />

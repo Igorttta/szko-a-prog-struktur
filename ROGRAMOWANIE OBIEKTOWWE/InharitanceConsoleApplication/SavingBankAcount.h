@@ -1,25 +1,32 @@
-#include "BAnkAcount.h"
+#include "BankAccount.h"
 
-
-class SavingBankAcount : public BankAccount
+class SavingBankAccount : public BankAccount
 {
-
 private:
-	double interestRate;
+
+	double interestRate; //oprocentowanie
+
 public:
-	SavingBankAcount()
+
+	SavingBankAccount() //: BankAccount()
 	{
 		interestRate = 0.05;
 	}
 
-	SavingBankAcount(double b, std::string o, std::string c, double ir)
-		:BankAccount(b, o, c)
+	SavingBankAccount(double b, std::string o, std::string c, double ir)
+		: BankAccount(b, o, c)
 	{
 		interestRate = ir;
 	}
+
 	void CalculateInterestRate()
 	{
-		balance = balance + balance + interestRate;
+		balance = balance + balance * interestRate;
 	}
 
-}
+	void AccountInformation()
+	{
+		BankAccount::AccountInformation();
+		std::cout << "Oprocentowanie: " << interestRate << "\n";
+	}
+};
