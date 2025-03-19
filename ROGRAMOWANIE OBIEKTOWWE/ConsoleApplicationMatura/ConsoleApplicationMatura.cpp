@@ -14,10 +14,12 @@ int main()
 	{
 		numbers.push_back(n);
 	}
+
 	std::cout << "liczby\n";
 	for (int i = 0; i < numbers.size(); i++)
 	{
 		std::cout << numbers[i];
 	}
+	std::cout << "\n";
 }
 
