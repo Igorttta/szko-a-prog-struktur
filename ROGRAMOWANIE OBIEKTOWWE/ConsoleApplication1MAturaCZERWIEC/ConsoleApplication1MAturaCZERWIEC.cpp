@@ -1,30 +1,43 @@
+
+
 #include <iostream>
 #include <fstream>
 #include <vector>
 
-int main()
-{
-	std::ifstream file("temperatury.txt");
+using namespace std;
 
-	/*
-	int numbers[200];
+int reverseNumber(int n) {
+    int reversed = 0;
+    while (n > 0) {
+        reversed = reversed * 10 + n % 10;
+        n /= 10;
+    }
+    return reversed; 
+}
 
-	for (int i = 0; i < 200; i++)
-	{
-		file >> numbers[i];
-	}*/
+int main() {
+    ifstream inputFile("Liczby.txt"); 
+    ofstream outputFile("Output.txt"); 
 
-	std::vector<int> numbers;
+    if (!inputFile) { 
+        cerr << "Failed to open input file." << endl;
+        return 1;  
 
-	int n;
-	while (file >> n)
-	{
-		numbers.push_back(n);
-	}
-	std::cout << "Odczytane liczby:\n";
-	for (int num : numbers)
-	{
-		std::cout << num << ", ";
-	}
-	std::cout << "\n";
-	if
+    if (!outputFile) {  
+        cerr << "Failed to open output file." << endl;
+        return 1;  
+    }
+
+    int number;
+    while (inputFile >> number) {
+        int reversed = reverseNumber(number);
+        if (reversed % 17 == 0) {
+            cout << reversed << endl;      
+            outputFile << reversed << endl; 
+        }
+    }
+
+    inputFile.close();
+    outputFile.close();
+    return 0;
+}
