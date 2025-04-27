@@ -19,4 +19,38 @@
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
+  <ItemGroup>
+    <Text Include="kierowcy.txt">
+      <Filter>Source Files</Filter>
+    </Text>
+    <Text Include="liczby_przyklad.txt">
+      <Filter>Source Files</Filter>
+    </Text>
+    <Text Include="rejestr.txt">
+      <Filter>Source Files</Filter>
+    </Text>
+    <Text Include="skrot_przyklad.txt">
+      <Filter>Source Files</Filter>
+    </Text>
+    <Text Include="skrot2_przyklad.txt">
+      <Filter>Source Files</Filter>
+    </Text>
+    <Text Include="taryfikator.txt">
+      <Filter>Source Files</Filter>
+    </Text>
+  </ItemGroup>
+  <ItemGroup>
+    <CopyFileToFolders Include="jablka.txt">
+      <Filter>Source Files</Filter>
+    </CopyFileToFolders>
+    <CopyFileToFolders Include="skrot.txt">
+      <Filter>Source Files</Filter>
+    </CopyFileToFolders>
+    <CopyFileToFolders Include="skrot2.txt">
+      <Filter>Resource Files</Filter>
+    </CopyFileToFolders>
+    <CopyFileToFolders Include="liczby.txt">
+      <Filter>Source Files</Filter>
+    </CopyFileToFolders>
+  </ItemGroup>
 </Project>

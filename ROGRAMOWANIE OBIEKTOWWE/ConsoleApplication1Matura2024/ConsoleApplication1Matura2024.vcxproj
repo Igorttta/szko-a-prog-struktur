@@ -129,6 +129,18 @@
   <ItemGroup>
     <ClCompile Include="ConsoleApplication1Matura2024.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <CopyFileToFolders Include="jablka.txt" />
+    <Text Include="kierowcy.txt" />
+    <CopyFileToFolders Include="liczby.txt" />
+    <Text Include="liczby_przyklad.txt" />
+    <Text Include="rejestr.txt" />
+    <CopyFileToFolders Include="skrot.txt" />
+    <CopyFileToFolders Include="skrot2.txt" />
+    <Text Include="skrot2_przyklad.txt" />
+    <Text Include="skrot_przyklad.txt" />
+    <Text Include="taryfikator.txt" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
