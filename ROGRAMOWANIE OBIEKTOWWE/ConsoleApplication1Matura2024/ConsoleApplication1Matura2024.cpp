@@ -1,22 +1,50 @@
 #include <iostream>
+using namespace std;
 
-int zad2(int n)
-{
-   
-    int m = 929273;
+int nieparzystySkrot(int n) {
+    int wynik = 0, mnoznik = 1;
     while (n > 0) {
-        m = m * 10 + n % 10;
+        int cyfra = n % 10;
+        if (cyfra % 2 != 0) {
+            wynik = wynik + cyfra * mnoznik;
+            mnoznik *= 10;
+        }
+        n = n / 10;
+    }
+    return wynik;
+}
+//zad2
+bool brakNieparzystych(int n) {
+    while (n > 0) {
+        int cyfra = n % 10;
+        if (cyfra % 2 != 0) return false;
         n /= 10;
-        if (m % 2 == 0)
-        {
-            std::cout << m;
+    }
+    return true;
+}
+
+int main() {
+    int liczba;
+    cout << "Podaj liczbe: ";
+    cin >> liczba;
+    cout << "Nieparzysty skrot: " << nieparzystySkrot(liczba) << endl;
+    return 0;
+  //zad2
+    ifstream wejscie("skrot.txt");
+    ofstream wyjscie("wyniki3_2.txt");
+    int liczba, najwieksza = 0, ile = 0;
+
+    while (wejscie >> liczba) {
+        if (brakNieparzystych(liczba)) {
+            ile++;
+            if (liczba > najwieksza) najwieksza = liczba;
         }
     }
-    
 
-}
-int main()
-{
-    zad2();
-}
+    wyjscie << ile << endl;
+    wyjscie << najwieksza << endl;
 
+    wejscie.close();
+    wyjscie.close();
+    return 0;
+}
