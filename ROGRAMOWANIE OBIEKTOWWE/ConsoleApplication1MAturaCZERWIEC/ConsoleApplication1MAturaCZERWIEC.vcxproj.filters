@@ -20,14 +20,8 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <CopyFileToFolders Include="..\..\..\Users\Sala213\Desktop\DANE\liczby.txt">
-      <Filter>Resource Files</Filter>
-    </CopyFileToFolders>
-    <CopyFileToFolders Include="..\..\..\Users\Sala213\Desktop\DANE\przyklad.txt">
-      <Filter>Resource Files</Filter>
-    </CopyFileToFolders>
-    <CopyFileToFolders Include="..\..\..\Users\Sala213\Desktop\DANE\temperatury.txt">
-      <Filter>Resource Files</Filter>
+    <CopyFileToFolders Include="liczby.txt">
+      <Filter>Source Files</Filter>
     </CopyFileToFolders>
   </ItemGroup>
 </Project>
