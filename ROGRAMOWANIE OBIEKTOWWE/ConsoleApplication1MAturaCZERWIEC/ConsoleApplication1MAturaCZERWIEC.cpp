@@ -1,92 +1,68 @@
-
-
 #include <iostream>
 #include <fstream>
-#include <vector>
-
 using namespace std;
 
-
-
-int main(){
-    /*
-    ifstream inputFile("Liczby.txt"); 
-    
-
-    if (!inputFile) { 
-        cerr << "Failed to open input file." << endl;
-        return 1;  
-
-    if (!outputFile) {  
-        cerr << "Failed to open output file." << endl;
-        return 1;  
+bool First(int n) {
+    if (n < 2) return false;
+    for (int i = 2; i * i <= n; i++) {
+        if (n % i == 0) return false;
     }
-
-    int number;
-    while (inputFile >> number) {
-        int reversed = reverseNumber(number);
-        if (reversed % 17 == 0) {
-            cout << reversed << endl;      
-            outputFile << reversed << endl; 
-        }
-    }
-
-    inputFile.close();
-    outputFile.close();
-    return 0;
-    */
-    std::ifstream file("przyklad.txt");
-
-    std::vector<int> numbers;
-
-    int n;
-    while (file >> n)
-    {
-        numbers.push_back(n);
-    }
-    std::cout << "Odczytane liczby:\n";
-	for (int num : numbers)
-	{
-		std::cout << num << ", ";
-	}
-	std::cout << "\n";
-
-	std::cout << "Zadanie 4.1\n";
-	int counter = 0;
-	for (int num : numbers) 
-	{
-		int firstDigit;
-		int lastDigit = num % 10;
-		int tmpNum = num;
-		do
-		{
-			firstDigit = tmpNum % 10;
-			tmpNum = tmpNum / 10;
-
-		} while (tmpNum != lastDigit);
-
-		if (firstDigit == lastDigit)
-		{
-			counter++;
-		}
-	}
-
-        int reversed = 0;
-        while (counter > 0) {
-            reversed = reversed * 10 + counter % 10;
-            counter /= 10;
-        }
-        return reversed;
-        //odbicie liczb i potem wartosc bezgednia z niej 
-
-        
-        if (n > 0)
-        {
-            std::cout <<  n;
-        }
-        if (n < 0)
-        {
-            n = n * -1;
-
-        }
+    return true;
 }
+
+int reverseNumber(int n) {
+    int reversed = 0;
+    while (n > 0) {
+        reversed = reversed * 10 + n % 10;
+        n /= 10;
+    }
+    return reversed;
+}
+
+int abs(int n) {
+    return (n < 0) ? -n : n;
+}
+
+int main() {
+    ifstream file("liczby.txt");
+    int numbers[100];
+    int count = 0;
+
+    while (file >> numbers[count]) {
+        count++;
+    }
+
+    cout << "Odwrócone liczby podzielne przez 17:" << endl;
+    for (int i = 0; i < count; i++) {
+        int reversed = reverseNumber(numbers[i]);
+        if (reversed % 17 == 0) {
+            cout << reversed << endl;
+        }
+    }
+
+    cout << "Liczba ró¿ni¹ca siê najbardziej od swojej odwrotnoœci:" << endl;
+    int maxDiff = 0;
+    int original = 0, reversed = 0;
+    for (int i = 0; i < count; i++) {
+        int r = reverseNumber(numbers[i]);
+        int diff = abs(numbers[i] - r);
+        if (diff > maxDiff) {
+            maxDiff = diff;
+            original = numbers[i];
+            reversed = r;
+        }
+    }
+    cout << original << " " << reversed << endl;
+
+    cout << "Liczby pierwsze, których odwrotnoœæ jest równie¿ liczb¹ pierwsz¹:" << endl;
+    for (int i = 0; i < count; i++) {
+        int r = reverseNumber(numbers[i]);
+        if (First(numbers[i]) && First(r)) {
+            cout << numbers[i] << endl;
+        }
+    }
+
+    return 0;
+}
+
+
