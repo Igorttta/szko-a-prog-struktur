@@ -12,14 +12,26 @@ int secoundNumber = firstNumber;
 Console.Write($"firstNumber = {firstNumber}");
 Console.Write($"secoundNumber = {secoundNumber}");
 
-void ParametrTest_v1(int p)
+void ParametrTest_v1( int p)
 {
     Console.WriteLine("Przed zmiana parametr test_v1");
     p++;
     Console.WriteLine($"Przed zmiana parametr test_v1{p}");
 }
+
+void ParametrTest_v2(ref int p)
+{
+    Console.WriteLine("Przed zmiana parametr test_v2");
+    p++;
+    Console.WriteLine($"Przed zmiana parametr test_v2{p}");
+}
 firstNumber = 99;
 Console.WriteLine($"Przed zmiana parametr test_v1 {firstNumber}");
 ParametrTest_v1(firstNumber);
 Console.WriteLine($"Po  ParametrTest_v1 {firstNumber}");
+
+firstNumber = 99;
+Console.WriteLine($"Przed zmiana parametr test_v2 {firstNumber}");
+ParametrTest_v2( ref firstNumber);
+Console.WriteLine($"Po  ParametrTest_v2 {firstNumber}");
 
