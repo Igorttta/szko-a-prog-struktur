@@ -2,8 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
+using System.Runtime.ConstrainedExecution;
+using System.Security.AccessControl;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace LinqPracticalTasksConsoleApp;
 
@@ -13,9 +16,6 @@ namespace LinqPracticalTasksConsoleApp;
 ========================================
 
 
-8. Oblicz �redni� pensj� wszystkich os�b.
-9. Znajd� najm�odsz� osob�.
-10. Sprawd�, czy jest kto� z Gda�ska.
 
 
 ========================================
@@ -107,8 +107,40 @@ internal class Task1
         var q6 = people.Select(p => p.City ).Distinct();
         Print("zad6", q6);
 
-      // zad  7.Oblicz liczb� os�b z Warszawy.
+        // zad  7.Oblicz liczb� os�b z Warszawy.
+       
+        var q7 = people.Count(p => p.City == "Warszawa");
+        Print("zad7",  new[] { q7 });
 
 
+        //       8.Oblicz �redni� pensj� wszystkich os�b.
+        var q8 = people.Average(p => p.Salary);
+        Print("zad7", new[] { q8 } );
+
+        //9.Znajd� najm�odsz� osob�.
+        var q9 = people.Average(p => p.Salary);
+        Print("zad7", new[] { q9 });
+
+        //10.Sprawd�, czy jest kto� z Gda�ska.
+        var q10 = people.Select(p => p.City == "Gdańsk");
+        Print("zad10",  q10 );
+
+        //  12.Znajd� osoby w wieku od 25 do 35 lat(w��cznie).
+        var q12 = people.Select(p => p.Age > 25 , Age < 35);
+        Print("zad10", q12);
+        //13.Oblicz sum� pensji os�b z Kielc.
+        var q13 = people.Count(p. => p.City == "Kielce");
+        Print("zad7", new[] { q13 });
+        /*
+        11.Posortuj osoby po mie�cie, a w ramach miasta po pensji malej�co.
+        13.Oblicz sum� pensji os�b z Kielc.
+        14.Znajd� pierwsz� osob�, kt�rej pensja jest wi�ksza ni� 10 000.
+        15.Znajd� ostatni� osob� w kolejno�ci alfabetycznej po nazwisku.
+        16.Wygeneruj dane os�b w formacie: "Imi� Nazwisko (Miasto)".
+        17.Sprawd�, czy wszyscy maj� co najmniej 18 lat.
+        18.Policz, ile jest kobiet.
+        19.Znajd� osoby, kt�re zarabiaj� wi�cej ni� �rednia pensja.
+        20.Znajd� najstarsz� osob� z Krakowa.
+        */
     }
 }
