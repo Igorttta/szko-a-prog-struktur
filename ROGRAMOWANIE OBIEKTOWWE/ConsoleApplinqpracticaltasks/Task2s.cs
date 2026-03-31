@@ -14,7 +14,6 @@ namespace LinqPracticalTasksConsoleApp;
 ========================================
 
 POZIOM 1 � PODSTAWOWY
-1. Wypisz wszystkie zam�wienia o statusie �New�.
 2. Sprawd�, czy istnieje zam�wienie na produkt �Laptop�.
 3. Wypisz zam�wienia z ostatnich 30 dni.
 
@@ -26,7 +25,7 @@ POZIOM 2 � �REDNI
 
 POZIOM 3 � ZAAWANSOWANY
 8. Znajd� zam�wienia, gdzie klient zam�wi� wi�cej ni� jeden r�ny produkt (czyli klient pojawia si� wi�cej ni� raz z r�nymi produktami).
-9. Wypisz klient�w wraz z liczb� dni, kt�re min�y od ich najstarszego zam�wienia.
+9. Wypisz klient�w wraz z liczb� dni, kte�re min�y od ich najstarszego zam�wienia.
 10. Wypisz wszystkie unikalne pary (Klient, Produkt).
 11. Znajd� klient�w, kt�rzy maj� co najmniej jedno zam�wienie w statusie �Cancelled� ORAZ co najmniej jedno w statusie �Delivered�.
 12. Wypisz zam�wienia, kt�rych warto�� mie�ci si� pomi�dzy 1000 a 3000 z� i zosta�y z�o�one w ci�gu ostatnich 14 dni.
@@ -80,4 +79,11 @@ internal class Task2
         };
     }
 }
-gc
+    //1. Wypisz wszystkie zam�wienia o statusie �New�.
+
+var newOrders = orders.Where(o => o.Status == OrderStatus.New);
+
+foreach (var order in newOrders)
+{
+    Console.WriteLine($"Id: {order.Id}, Klient: {order.Customer}, Produkt: {order.Product}");
+}
