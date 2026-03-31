@@ -1,0 +1,154 @@
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Reflection;
+using System.Runtime.ConstrainedExecution;
+using System.Security.AccessControl;
+using System.Text;
+using System.Threading.Tasks;
+using static System.Runtime.InteropServices.JavaScript.JSType;
+/*
+========================================
+== POZIOM 3   ZAAWANSOWANY ==
+========================================
+
+21. Znajd  osoby, kt re maj  skill "C#".
+22. Znajd  osoby, kt re maj  co najmniej trzy skille.
+23. Znajd  osoby z Warszawy, posortuj je po wieku malej co i wypisz tylko ich imi , nazwisko, wiek i pensj .
+24. Sprawd , czy kto  ma skill "Azure".
+25. Sprawd , czy wszyscy zarabiaj  co najmniej 4000.
+26. Znajd  osob  o najwi kszej pensji.
+27. Znajd  osob  o najmniejszej pensji.
+28. Wypisz osoby, kt re maj  taki sam wiek jak najstarsza osoba.
+
+
+========================================
+== POZIOM 4   EKSTRA / DLA CH TNYCH ==
+========================================
+
+29. Posortuj osoby wed ug liczby posiadanych skilli.
+30. Podziel osoby na dwie listy: zarabiaj cych przynajmniej 8000 oraz zarabiaj cych mniej ni  8000.
+31. Przyporz dkuj ka d  osob  do przedzia u wiekowego (np. 20 29, 30 39, 40 49) i wypisz osoby z ka dego przedzia u.
+
+*/
+namespace LinqPracticalTasksConsoleApp;
+
+internal class Task1
+{
+    void Print<T>(string title, IEnumerable<T> data)
+    {
+        Console.WriteLine($"\n=== {title} ===");
+        foreach (var item in data)
+            Console.WriteLine(item);
+    }
+
+    public void DoTasks()
+    {
+        var people = new List<Person>
+        {
+            new Person() { Id=1, FirstName="Anna",  LastName="Nowak", Age=29, Gender=Gender.Female, City="Kielce", Salary=8200m,  Skills=new List<string>{"C#", "LINQ", "SQL"} },
+            new() { Id=2, FirstName="Marek", LastName="Kowalski", Age=43, Gender=Gender.Male, City="Warszawa", Salary=15000m, Skills=new List<string>{"Azure", "C#", "DevOps"} },
+            new() { Id=3, FirstName="Ewa", LastName="Wiśniewska", Age=35, Gender=Gender.Female, City="Kraków", Salary=9800m, Skills=new List<string>{"JavaScript", "React"} },
+            new() { Id=4, FirstName="Jan", LastName="Zieliński", Age=43, Gender=Gender.Male, City="Gdańsk", Salary=12000m, Skills=new List<string>{"C#", "SQL"} },
+            new() { Id=5, FirstName="Ola", LastName="Maj", Age=26, Gender=Gender.Female, City="Kielce", Salary=7200m, Skills=new List<string>{"Python", "ML"} },
+            new() { Id=6, FirstName="Piotr", LastName="Lewandowski", Age=37, Gender=Gender.Male, City="Warszawa", Salary=13400m, Skills=new List<string>{"C#", "LINQ", "Azure"} },
+            new() { Id=7, FirstName="Iga", LastName="Kowal", Age=31, Gender=Gender.Female, City="Kraków", Salary=9900m, Skills=new List<string>{"Go", "Kubernetes"} },
+            new() { Id=8, FirstName="Tomek", LastName="Sikora", Age=29, Gender=Gender.Male, City="Kielce", Salary=8800m, Skills=new List<string>{"C#", "MAUI", "Bluetooth"} },
+        };
+
+        // =========================
+        // POZIOM 1 – PODSTAWOWY
+        // =========================
+
+        // 1. Znajdź osoby z Krakowa
+        var q1 = people.Where(p => p.City == "Kraków");
+        Print("zad1", q1);
+
+        // 2. Znajdź osoby pełnoletnie
+        var q2 = people.Where(p => p.Age >= 18);
+        Print("zad2", q2);
+
+        // 3. Posortuj osoby po wieku rosnąco
+        var q3 = people.OrderBy(p => p.Age);
+        Print("zad3", q3);
+
+        // 4. Posortuj osoby po nazwisku malejąco
+        var q4 = people.OrderByDescending(p => p.LastName);
+        Print("zad4", q4);
+
+        // 5. Wypisz tylko imię i nazwisko każdej osoby
+        var q5 = people.Select(p => $"{p.FirstName} {p.LastName}");
+        Print("zad5", q5);
+
+        // 6. Wypisz unikalne miasta
+        var q6 = people.Select(p => p.City).Distinct();
+        Print("zad6", q6);
+
+        // 7. Policz osoby z Warszawy
+        var q7 = people.Count(p => p.City == "Warszawa");
+        Print("zad7", new[] { q7 });
+
+        // 8. Oblicz średnią pensję
+        var q8 = people.Average(p => p.Salary);
+        Print("zad8", new[] { q8 });
+
+        // 9. Znajdź najmłodszą osobę
+        var q9 = people.OrderBy(p => p.Age).First();
+        Print("zad9", new[] { q9 });
+
+        // 10. Sprawdź, czy ktoś jest z Gdańska
+        var q10 = people.Any(p => p.City == "Gdańsk");
+        Print("zad10", new[] { q10 });
+
+        // =========================
+        // POZIOM 2 – ŚREDNI
+        // =========================
+
+        // 11. Posortuj osoby po mieście, a w ramach miasta po pensji malejąco
+        var q11 = people.OrderBy(p => p.City)
+                        .ThenByDescending(p => p.Salary);
+        Print("zad11", q11);
+
+        // 12. Znajdź osoby w wieku od 25 do 35 lat
+        var q12 = people.Where(p => p.Age >= 25 && p.Age <= 35);
+        Print("zad12", q12);
+
+        // 13. Oblicz sumę pensji osób z Kielc
+        var q13 = people.Where(p => p.City == "Kielce")
+                        .Sum(p => p.Salary);
+        Print("zad13", new[] { q13 });
+
+        // 14. Znajdź pierwszą osobę z pensją > 10000
+        var q14 = people.FirstOrDefault(p => p.Salary > 10000);
+        Print("zad14", new[] { q14 });
+
+        // 15. Znajdź ostatnią osobę alfabetycznie po nazwisku
+        var q15 = people.OrderBy(p => p.LastName).Last();
+        Print("zad15", new[] { q15 });
+
+        // 16. Wygeneruj format: "Imię Nazwisko (Miasto)"
+        var q16 = people.Select(p => $"{p.FirstName} {p.LastName} ({p.City})");
+        Print("zad16", q16);
+
+        // 17. Sprawdź, czy wszyscy mają co najmniej 18 lat
+        var q17 = people.All(p => p.Age >= 18);
+        Print("zad17", new[] { q17 });
+
+        // 18. Policz ile jest kobiet
+        var q18 = people.Count(p => p.Gender == Gender.Female);
+        Print("zad18", new[] { q18 });
+
+        // 19. Znajdź osoby zarabiające powyżej średniej
+        var avgSalary = people.Average(p => p.Salary);
+        var q19 = people.Where(p => p.Salary > avgSalary);
+        Print("zad19", q19);
+
+        // 20. Znajdź najstarszą osobę z Krakowa
+        var q20 = people.Where(p => p.City == "Kraków")
+                        .OrderByDescending(p => p.Age)
+                        .FirstOrDefault();
+        Print("zad20", new[] { q20 });
+    }
+}
+
